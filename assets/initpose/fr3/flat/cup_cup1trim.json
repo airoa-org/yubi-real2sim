@@ -1,0 +1,80 @@
+{
+  "cup_xy": [
+    0.1693,
+    0.2674
+  ],
+  "plate_xy": [
+    -0.0683,
+    0.2723
+  ],
+  "method": "placement_board_v3",
+  "offset_world_m": {
+    "cup": [
+      -0.15,
+      0.1,
+      0.0
+    ],
+    "plate": [
+      -0.15,
+      0.0,
+      0.0
+    ]
+  },
+  "base_positions": "scene_positions_sam3.json",
+  "centroids_px": {
+    "cup": [
+      433.3,
+      273.4
+    ],
+    "plate": [
+      323.5,
+      231.7
+    ]
+  },
+  "pixel_to_world_affine": {
+    "M": [
+      [
+        0.0015798846074428139,
+        0.00026210501719610207
+      ],
+      [
+        -0.0001243822604547563,
+        -0.0014822751593949694
+      ]
+    ],
+    "t": [
+      -0.6020456963165985,
+      0.6388839642821723
+    ],
+    "det": -2.3092224938075722e-06,
+    "rms_mm": 13.824900087579708
+  },
+  "source": {
+    "board_view": "board85",
+    "initial_arm_joints": "grip07",
+    "kind": "position_search_local1",
+    "placed_at": "2026-09-13T08:57:40.434Z",
+    "placed_by": "manual, in the placement board",
+    "position_step_m": 0.005,
+    "rationale": "Local search, one level around placement r30_07; plate fixed; only cup XY varies.",
+    "scene": "franka_flat",
+    "tool": "placement board (development tool)",
+    "yaw_step_deg": 5,
+    "of": "scene_positions_franka_flat.json (not kept in the repository)",
+    "of_sha256": "5862c26aa8b86aaec5e6ed81e32542a13765e33e2e8c4e9b649f0e2e211b5e7a",
+    "placement_id": "r30_07_center",
+    "cup_offset_mm": [
+      24.3,
+      22.4
+    ],
+    "plate_offset_mm": [
+      6.7,
+      -12.7
+    ],
+    "parent_placement": "r30_07",
+    "cup_delta_from_parent_mm": [
+      0,
+      0
+    ]
+  }
+}

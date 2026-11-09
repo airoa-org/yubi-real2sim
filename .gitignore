@@ -1,0 +1,66 @@
+# large/generated artifacts (not for git)
+*.mp4
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webm
+*.npy
+*.npz
+*.pth
+*.ckpt
+*.sif
+# logs / generated outputs
+*.log
+/outputs/
+/runtime-cache/
+/local-inputs/
+/.env
+/.venv/
+/config/local_run_*.yaml
+assets/runtime/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+MUJOCO_LOG.TXT
+# Public archive assets installed into repository package locations. The
+# installer writes each pinned tree whole, including its LICENSE, NOTICE and
+# README.txt.
+robosuite_env/assets/trellis_cup_plate
+robosuite_env/assets/trellis_office
+# FR3 STL payloads are installed from the pinned public archive.
+robosuite_env/assets/fr3_collision
+robosuite_env/assets/fr3_visual
+# backups / scratch outputs
+*.bak
+*.out
+# Blender files
+*.blend
+*.blend1
+
+# 3DGS background payloads are installed separately from tracked JSON/transform metadata.
+robosuite_env/assets/gs_backgrounds/**/point_cloud.ply
+!robosuite_env/obj_calib/gs_w2gs.npy
+!robosuite_env/assets/gs_backgrounds/*/gs_w2gs.npy
+
+# External source dependencies cloned by scripts/bootstrap.sh. The no-slash
+# form also ignores dependency symlinks.
+/third_party/*
+!/third_party/GaussianWrapping
+/.tools/
+
+# Generated deterministic initial-state files.
+**/*deterministic_init_state*.json
+**/*deterministic-init-state*.json
+
+# Keep generated Python bytecode ignored even inside explicitly included
+# maintained third-party adapter directories.
+**/__pycache__/
+**/*.py[cod]

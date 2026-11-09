@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "frame": "table",
+  "coordinate_convention": {
+    "handedness": "right",
+    "axes": {
+      "x": "right",
+      "y": "away_from_operator",
+      "z": "up"
+    },
+    "pose": "T_table_object",
+    "position_unit": "m",
+    "quaternion_order": "wxyz",
+    "object_origin": "bottom centre of the collision hull set"
+  },
+  "source": {
+    "kind": "manual_placement",
+    "scene": "franka_flat",
+    "robots": [
+      "fr3"
+    ],
+    "placed_by": "test fixture",
+    "placed_at": "2026-09-10T09:11:09Z",
+    "tool": "test fixture",
+    "rationale": "Test fixture: a box layout for Franka Flat that names its rig in source.robots, so a box run on any other rig is refused (tasks/layout_selection.py require_layout_rig). No release profile uses it."
+  },
+  "objects": {
+    "box": {
+      "position_m": [
+        -0.085,
+        0.265,
+        0.0
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "asset": "box"
+    },
+    "lan": {
+      "position_m": [
+        0.125,
+        0.02,
+        0.0
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "asset": "lan"
+    },
+    "pen": {
+      "position_m": [
+        -0.255,
+        0.05,
+        0.0
+      ],
+      "quaternion_wxyz": [
+        0.0004731,
+        0.20773119,
+        0.00222777,
+        0.9781833
+      ],
+      "asset": "pen"
+    },
+    "tape": {
+      "position_m": [
+        -0.105,
+        0.01,
+        0.0
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "asset": "tape"
+    }
+  }
+}

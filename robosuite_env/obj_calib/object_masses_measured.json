@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "unit": "kg",
+  "source": {
+    "kind": "manual_measurement",
+    "baked_in": "the task-object asset densities",
+    "rationale": "Measured masses of the task objects, weighed on a scale. Layouts and compiled models are checked against this file, so a weight cannot disagree with itself in two places.",
+    "how_to_measure": "Through MujocoWorldBase, never mujoco.MjModel.from_xml_path: robosuite's base.xml sets inertiagrouprange=\"0 0\", so only group-0 hulls carry mass and a standalone compile counts the group-1 visual shell as well."
+  },
+  "objects": {
+    "box": 0.1,
+    "tray": 0.912,
+    "gtray": 0.112,
+    "tape": 0.024,
+    "pen": 0.01,
+    "lan": 0.01,
+    "plate": 0.05,
+    "plate_yellow": 0.05,
+    "cup": 0.028,
+    "cup_yellow": 0.028,
+    "cup_pink": 0.03,
+    "donut_cruller_a": 0.02,
+    "donut_cruller_b": 0.02,
+    "donut_ring_choco": 0.02,
+    "donut_ring_plain": 0.02,
+    "donut_ring_strawberry": 0.02
+  }
+}

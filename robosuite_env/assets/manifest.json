@@ -1,0 +1,683 @@
+{
+  "schema_version": 1,
+  "bundles": {
+    "fr3": {
+      "mjcf": "fr3_robot.xml",
+      "required_roles": [
+        "visual",
+        "collision"
+      ],
+      "roles": {
+        "visual": {
+          "expected_count": 28,
+          "allowed_prefixes": [
+            "fr3_visual/"
+          ]
+        },
+        "collision": {
+          "expected_count": 8,
+          "allowed_prefixes": [
+            "fr3_collision/"
+          ]
+        }
+      }
+    },
+    "yubi_right": {
+      "mjcf": "yubi_right.xml",
+      "required_roles": [
+        "visual",
+        "collision"
+      ],
+      "roles": {
+        "visual": {
+          "expected_count": 62,
+          "allowed_prefixes": [
+            "yubi_right/visual_mj/",
+            "fr3_yubi_right_registered/visual/"
+          ]
+        },
+        "collision": {
+          "expected_count": 178,
+          "allowed_prefixes": [
+            "yubi_right/coll_mj_hulls/",
+            "yubi_right/guard_collision/",
+            "fr3_yubi_right_registered/collision/"
+          ]
+        }
+      }
+    },
+    "yubi_left": {
+      "mjcf": "yubi_left.xml",
+      "required_roles": [
+        "visual",
+        "collision"
+      ],
+      "roles": {
+        "visual": {
+          "expected_count": 62,
+          "allowed_prefixes": [
+            "yubi_left/visual_mj/",
+            "fr3_yubi_right_registered/visual/"
+          ]
+        },
+        "collision": {
+          "expected_count": 179,
+          "allowed_prefixes": [
+            "yubi_left/coll_mj_hulls/",
+            "yubi_left/guard_collision/",
+            "fr3_yubi_right_registered/collision/"
+          ]
+        }
+      }
+    },
+    "cup": {
+      "mjcf": "cup.xml",
+      "required_roles": [
+        "visual",
+        "collision"
+      ],
+      "roles": {
+        "visual": {
+          "expected_count": 1,
+          "allowed_prefixes": [
+            "trellis_cup_plate/"
+          ],
+          "expected_files": [
+            "trellis_cup_plate/cup_vis.obj"
+          ]
+        },
+        "collision": {
+          "expected_count": 38,
+          "allowed_prefixes": [
+            "trellis_cup_plate/coll/"
+          ],
+          "expected_files": [
+            "trellis_cup_plate/coll/cup_000.obj",
+            "trellis_cup_plate/coll/cup_001.obj",
+            "trellis_cup_plate/coll/cup_002.obj",
+            "trellis_cup_plate/coll/cup_003.obj",
+            "trellis_cup_plate/coll/cup_004.obj",
+            "trellis_cup_plate/coll/cup_005.obj",
+            "trellis_cup_plate/coll/cup_006.obj",
+            "trellis_cup_plate/coll/cup_007.obj",
+            "trellis_cup_plate/coll/cup_008.obj",
+            "trellis_cup_plate/coll/cup_009.obj",
+            "trellis_cup_plate/coll/cup_010.obj",
+            "trellis_cup_plate/coll/cup_011.obj",
+            "trellis_cup_plate/coll/cup_012.obj",
+            "trellis_cup_plate/coll/cup_013.obj",
+            "trellis_cup_plate/coll/cup_014.obj",
+            "trellis_cup_plate/coll/cup_015.obj",
+            "trellis_cup_plate/coll/cup_016.obj",
+            "trellis_cup_plate/coll/cup_017.obj",
+            "trellis_cup_plate/coll/cup_018.obj",
+            "trellis_cup_plate/coll/cup_019.obj",
+            "trellis_cup_plate/coll/cup_020.obj",
+            "trellis_cup_plate/coll/cup_021.obj",
+            "trellis_cup_plate/coll/cup_022.obj",
+            "trellis_cup_plate/coll/cup_023.obj",
+            "trellis_cup_plate/coll/cup_024.obj",
+            "trellis_cup_plate/coll/cup_025.obj",
+            "trellis_cup_plate/coll/cup_026.obj",
+            "trellis_cup_plate/coll/cup_027.obj",
+            "trellis_cup_plate/coll/cup_028.obj",
+            "trellis_cup_plate/coll/cup_029.obj",
+            "trellis_cup_plate/coll/cup_030.obj",
+            "trellis_cup_plate/coll/cup_031.obj",
+            "trellis_cup_plate/coll/cup_032.obj",
+            "trellis_cup_plate/coll/cup_033.obj",
+            "trellis_cup_plate/coll/cup_034.obj",
+            "trellis_cup_plate/coll/cup_035.obj",
+            "trellis_cup_plate/coll/cup_036.obj",
+            "trellis_cup_plate/coll/cup_037.obj"
+          ]
+        }
+      },
+      "runtime_geometry": {
+        "source_collision_geometry": {
+          "bounds_min_m": [
+            -0.0365698154612,
+            -0.0366110705429,
+            -0.0003977204099
+          ],
+          "bounds_max_m": [
+            0.0365501498264,
+            0.0365593006575,
+            0.0846023112278
+          ],
+          "z_min_m": -0.0003977204099,
+          "z_max_m": 0.0846023112278,
+          "xy_radius_m": 0.0368424624415595
+        },
+        "compiled_collision_observed": {
+          "bounds_min_m": [
+            -0.03656981502,
+            -0.03661107137,
+            -0.00039772038
+          ],
+          "bounds_max_m": [
+            0.03655015037,
+            0.03655929975,
+            0.08460230953
+          ],
+          "z_min_m": -0.00039772038,
+          "z_max_m": 0.08460230953,
+          "xy_radius_m": 0.03684246303
+        },
+        "semantic_sites_m": {
+          "bottom_site": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "top_site": [
+            0.0,
+            0.0,
+            0.08274
+          ],
+          "horizontal_radius_site": [
+            0.0355,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "plate": {
+      "mjcf": "plate.xml",
+      "required_roles": [
+        "visual",
+        "collision"
+      ],
+      "roles": {
+        "visual": {
+          "expected_count": 1,
+          "allowed_prefixes": [
+            "trellis_cup_plate/"
+          ],
+          "expected_files": [
+            "trellis_cup_plate/plate_vis.obj"
+          ]
+        },
+        "collision": {
+          "expected_count": 20,
+          "allowed_prefixes": [
+            "trellis_cup_plate/coll/"
+          ],
+          "expected_files": [
+            "trellis_cup_plate/coll/plate_000.obj",
+            "trellis_cup_plate/coll/plate_001.obj",
+            "trellis_cup_plate/coll/plate_002.obj",
+            "trellis_cup_plate/coll/plate_003.obj",
+            "trellis_cup_plate/coll/plate_004.obj",
+            "trellis_cup_plate/coll/plate_005.obj",
+            "trellis_cup_plate/coll/plate_006.obj",
+            "trellis_cup_plate/coll/plate_007.obj",
+            "trellis_cup_plate/coll/plate_008.obj",
+            "trellis_cup_plate/coll/plate_009.obj",
+            "trellis_cup_plate/coll/plate_010.obj",
+            "trellis_cup_plate/coll/plate_011.obj",
+            "trellis_cup_plate/coll/plate_012.obj",
+            "trellis_cup_plate/coll/plate_013.obj",
+            "trellis_cup_plate/coll/plate_014.obj",
+            "trellis_cup_plate/coll/plate_015.obj",
+            "trellis_cup_plate/coll/plate_016.obj",
+            "trellis_cup_plate/coll/plate_017.obj",
+            "trellis_cup_plate/coll/plate_018.obj",
+            "trellis_cup_plate/coll/plate_019.obj"
+          ]
+        }
+      },
+      "runtime_geometry": {
+        "source_collision_geometry": {
+          "bounds_min_m": [
+            -0.090007269996,
+            -0.0900020114997,
+            -0.0006518344298
+          ],
+          "bounds_max_m": [
+            0.0899927975995,
+            0.0899949425125,
+            0.01964160204
+          ],
+          "z_min_m": -0.0006518344298,
+          "z_max_m": 0.01964160204,
+          "xy_radius_m": 0.0902683802941864
+        },
+        "compiled_collision_observed": {
+          "bounds_min_m": [
+            -0.09000727343,
+            -0.09000201499,
+            -0.00065183445
+          ],
+          "bounds_max_m": [
+            0.08999279623,
+            0.08999494445,
+            0.01964160098
+          ],
+          "z_min_m": -0.00065183445,
+          "z_max_m": 0.01964160098,
+          "xy_radius_m": 0.09026837957
+        },
+        "semantic_sites_m": {
+          "bottom_site": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "top_site": [
+            0.0,
+            0.0,
+            0.018912
+          ],
+          "horizontal_radius_site": [
+            0.089371,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "box": {
+      "mjcf": "box.xml",
+      "required_roles": [
+        "visual",
+        "collision"
+      ],
+      "roles": {
+        "visual": {
+          "expected_count": 1,
+          "allowed_prefixes": [
+            "trellis_office/"
+          ],
+          "expected_files": [
+            "trellis_office/box_vis.obj"
+          ]
+        },
+        "collision": {
+          "expected_count": 24,
+          "allowed_prefixes": [
+            "trellis_office/coll/"
+          ],
+          "expected_files": [
+            "trellis_office/coll/box_000.obj",
+            "trellis_office/coll/box_001.obj",
+            "trellis_office/coll/box_002.obj",
+            "trellis_office/coll/box_003.obj",
+            "trellis_office/coll/box_004.obj",
+            "trellis_office/coll/box_005.obj",
+            "trellis_office/coll/box_006.obj",
+            "trellis_office/coll/box_007.obj",
+            "trellis_office/coll/box_008.obj",
+            "trellis_office/coll/box_009.obj",
+            "trellis_office/coll/box_010.obj",
+            "trellis_office/coll/box_011.obj",
+            "trellis_office/coll/box_012.obj",
+            "trellis_office/coll/box_013.obj",
+            "trellis_office/coll/box_014.obj",
+            "trellis_office/coll/box_015.obj",
+            "trellis_office/coll/box_016.obj",
+            "trellis_office/coll/box_017.obj",
+            "trellis_office/coll/box_018.obj",
+            "trellis_office/coll/box_019.obj",
+            "trellis_office/coll/box_020.obj",
+            "trellis_office/coll/box_021.obj",
+            "trellis_office/coll/box_022.obj",
+            "trellis_office/coll/box_023.obj"
+          ]
+        }
+      },
+      "runtime_geometry": {
+        "source_collision_geometry": {
+          "bounds_min_m": [
+            -0.1442892431,
+            -0.1590984104,
+            0.0
+          ],
+          "bounds_max_m": [
+            0.1442892431,
+            0.1590984104,
+            0.2319938796
+          ],
+          "z_min_m": 0.0,
+          "z_max_m": 0.2319938796,
+          "xy_radius_m": 0.2092299346154
+        },
+        "compiled_collision_observed": {
+          "bounds_min_m": [
+            -0.14428924061,
+            -0.15909841343,
+            -1.79e-09
+          ],
+          "bounds_max_m": [
+            0.14428924085,
+            0.15909841062,
+            0.23199387932
+          ],
+          "z_min_m": -1.79e-09,
+          "z_max_m": 0.23199387932,
+          "xy_radius_m": 0.20922993309
+        },
+        "semantic_sites_m": {
+          "bottom_site": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "top_site": [
+            0.0,
+            0.0,
+            0.240357
+          ],
+          "horizontal_radius_site": [
+            0.1591,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "tape": {
+      "mjcf": "tape.xml",
+      "required_roles": [
+        "visual",
+        "collision"
+      ],
+      "roles": {
+        "visual": {
+          "expected_count": 1,
+          "allowed_prefixes": [
+            "trellis_office/"
+          ],
+          "expected_files": [
+            "trellis_office/tape_vis.obj"
+          ]
+        },
+        "collision": {
+          "expected_count": 17,
+          "allowed_prefixes": [
+            "trellis_office/coll/"
+          ],
+          "expected_files": [
+            "trellis_office/coll/tape_000.obj",
+            "trellis_office/coll/tape_001.obj",
+            "trellis_office/coll/tape_002.obj",
+            "trellis_office/coll/tape_003.obj",
+            "trellis_office/coll/tape_004.obj",
+            "trellis_office/coll/tape_005.obj",
+            "trellis_office/coll/tape_006.obj",
+            "trellis_office/coll/tape_007.obj",
+            "trellis_office/coll/tape_008.obj",
+            "trellis_office/coll/tape_009.obj",
+            "trellis_office/coll/tape_010.obj",
+            "trellis_office/coll/tape_011.obj",
+            "trellis_office/coll/tape_012.obj",
+            "trellis_office/coll/tape_013.obj",
+            "trellis_office/coll/tape_014.obj",
+            "trellis_office/coll/tape_015.obj",
+            "trellis_office/coll/tape_016.obj"
+          ]
+        }
+      },
+      "runtime_geometry": {
+        "source_collision_geometry": {
+          "bounds_min_m": [
+            -0.0402294178,
+            -0.0403202454,
+            0.0
+          ],
+          "bounds_max_m": [
+            0.0402294178,
+            0.0403202454,
+            0.0517162724
+          ],
+          "z_min_m": 0.0,
+          "z_max_m": 0.0517162724,
+          "xy_radius_m": 0.0410464225071
+        },
+        "compiled_collision_observed": {
+          "bounds_min_m": [
+            -0.04022941577,
+            -0.04032024545,
+            -4.2e-10
+          ],
+          "bounds_max_m": [
+            0.04022941558,
+            0.04032024545,
+            0.0517162705
+          ],
+          "z_min_m": -4.2e-10,
+          "z_max_m": 0.0517162705,
+          "xy_radius_m": 0.041046422
+        },
+        "semantic_sites_m": {
+          "bottom_site": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "top_site": [
+            0.0,
+            0.0,
+            0.0517
+          ],
+          "horizontal_radius_site": [
+            0.0403,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "pen": {
+      "mjcf": "pen.xml",
+      "required_roles": [
+        "visual",
+        "collision"
+      ],
+      "roles": {
+        "visual": {
+          "expected_count": 1,
+          "allowed_prefixes": [
+            "trellis_office/"
+          ],
+          "expected_files": [
+            "trellis_office/pen_vis.obj"
+          ]
+        },
+        "collision": {
+          "expected_count": 2,
+          "allowed_prefixes": [
+            "trellis_office/coll/"
+          ],
+          "expected_files": [
+            "trellis_office/coll/pen_000.obj",
+            "trellis_office/coll/pen_001.obj"
+          ]
+        }
+      },
+      "runtime_geometry": {
+        "source_collision_geometry": {
+          "bounds_min_m": [
+            -0.0089154115,
+            -0.0732479427,
+            0.0
+          ],
+          "bounds_max_m": [
+            0.0089154115,
+            0.0732479427,
+            0.0176485748
+          ],
+          "z_min_m": 0.0,
+          "z_max_m": 0.0176485748,
+          "xy_radius_m": 0.0732783284129
+        },
+        "compiled_collision_observed": {
+          "bounds_min_m": [
+            -0.00891541152,
+            -0.0732479382,
+            6e-11
+          ],
+          "bounds_max_m": [
+            0.00891541169,
+            0.0732479389,
+            0.01764857448
+          ],
+          "z_min_m": 6e-11,
+          "z_max_m": 0.01764857448,
+          "xy_radius_m": 0.07327832391
+        },
+        "semantic_sites_m": {
+          "bottom_site": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "top_site": [
+            0.0,
+            0.0,
+            0.0176
+          ],
+          "horizontal_radius_site": [
+            0.0732,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "lan": {
+      "mjcf": "lan.xml",
+      "required_roles": [
+        "visual",
+        "collision"
+      ],
+      "roles": {
+        "visual": {
+          "expected_count": 1,
+          "allowed_prefixes": [
+            "trellis_office/"
+          ],
+          "expected_files": [
+            "trellis_office/lan_vis.obj"
+          ]
+        },
+        "collision": {
+          "expected_count": 10,
+          "allowed_prefixes": [
+            "trellis_office/coll/"
+          ],
+          "expected_files": [
+            "trellis_office/coll/lan_000.obj",
+            "trellis_office/coll/lan_001.obj",
+            "trellis_office/coll/lan_002.obj",
+            "trellis_office/coll/lan_003.obj",
+            "trellis_office/coll/lan_004.obj",
+            "trellis_office/coll/lan_005.obj",
+            "trellis_office/coll/lan_006.obj",
+            "trellis_office/coll/lan_007.obj",
+            "trellis_office/coll/lan_008.obj",
+            "trellis_office/coll/lan_009.obj"
+          ]
+        }
+      },
+      "runtime_geometry": {
+        "source_collision_geometry": {
+          "bounds_min_m": [
+            -0.0497167053,
+            -0.0535337693,
+            0.0
+          ],
+          "bounds_max_m": [
+            0.0497167053,
+            0.0535337693,
+            0.0117789879
+          ],
+          "z_min_m": 0.0,
+          "z_max_m": 0.0117789879,
+          "xy_radius_m": 0.068011231936
+        },
+        "compiled_collision_observed": {
+          "bounds_min_m": [
+            -0.04971670606,
+            -0.05353376862,
+            7e-11
+          ],
+          "bounds_max_m": [
+            0.04971670613,
+            0.05353376823,
+            0.01177898759
+          ],
+          "z_min_m": 7e-11,
+          "z_max_m": 0.01177898759,
+          "xy_radius_m": 0.06801123509
+        },
+        "semantic_sites_m": {
+          "bottom_site": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "top_site": [
+            0.0,
+            0.0,
+            0.0118
+          ],
+          "horizontal_radius_site": [
+            0.0535,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "runtime_mesh_set_sha256": {
+    "box": "da25d1703fc7884f8af3c3c4a42811e770e489d14b31dd1547355f3321a17294",
+    "cup": "682b3905b88d1e26fb1a2816251a0ce0dbb7a6a7f8785cf74085b4359139e303",
+    "lan": "20b365a03045df81484d59e8a87291065491c8bba2cf17b8762db2e1b18668ea",
+    "pen": "e4ab8e8e8bd4068fcb4398f01b3c2438702f3124abcc6547b481c24cf2c11312",
+    "plate": "07f4ae6964166c432b55a53abf2139ca76b2833e254f48bf4f2ae21698613cf6",
+    "tape": "a17b32c5a5d5e4c2334b8f9fd95c47f370d2a717b696b3973c7e2d28c436647b"
+  },
+  "forbidden": {
+    "path_globs": [
+      "**/cuph_*.obj"
+    ],
+    "candidate_sizes": [
+      413,
+      417,
+      421,
+      425,
+      429,
+      2730
+    ],
+    "sha256": [
+      "00dccc5fbc8edb1e19222ae0c3ab14aff134ca1e0a64e88f7ae24fcac15fbecb",
+      "09ae48fb882b8e04e08b331e7122bda22b6454721ab0e550f9c427acb2cec7a1",
+      "0cc91008757617b4150a04c5b89ea33d25429068cd9191e648c56093213451cd",
+      "13e77657235fb14faa8beb99dd4d3ddd87edb0d9e2560f0a6833dfdc2b25dd96",
+      "315d8a3243a068dd90f198bfddde511d3ab91d8be1aa2dee9be9762c8b564aa3",
+      "372aedac0a8775a00bf0b6110412dda90cb4a24ec64aed952eca524737a5acec",
+      "42833ab7608a1bb755938bd681de6f2e54e62405632fe53f6a7d0d1ef0a55129",
+      "45015727501a23fb13e0ccc463c25641fbff8dd3b9e392258fab74d59a82478e",
+      "4b86211418fcee83e97e4742c57dc9b8584e52d716238716324d7fff93075cef",
+      "5411251e6ee55b774bba86c3974267dd87af37813de3164b79c8cfa56891c734",
+      "5d48114dfc752e9a0d81b155861b2c32b4454606c729d21ae2f1a923fcaa6087",
+      "76ba22bc065c6c89b20034c8ded2757ba9d5b9cf0c8e6078f5613d37b2e69b6f",
+      "7cd230c6fe10a4131ad7ff90081c0c80ebf2e93fce6f0232394ed98d97036291",
+      "8480b86387d48c9b98bc58d5ebd925f85fc74c5dc8e0e29645d5b4b5cbc14d41",
+      "8f15c419715fc31c10a1b2cd2ddf00ab5e150386b19aa13f52fc0c8061029d88",
+      "adbc62eacb3f667d901196b7e7c8de3d8e4f8f9f591746ad2b602a04a24083c5",
+      "b231154b60e5444b31bb5ff4fca2e985e2e4268f97d38a27071be20d1ba8e1f8",
+      "b2a710855a1839c8d2b0182d38ff4f706ef283564550521aebdff845d0a4dccf",
+      "c836b2b6dac93c3219cb46cce14fa6734220f5d45243ee539ae912c50b5c2613",
+      "cf17e46916f355398926e5c94571f37cd664145a61010e0fa2e2eca7571f1b6c",
+      "d3bc5bef34392a713d98fab9ffd1e2e0e6f6a65e2235dfeb2240d1aad1e5f112",
+      "da6bc133eba4768d4b9a88534185e56f54cc89f41d78b3e1c493843428e8865d",
+      "dac0a87cf2a647748f91add744f48836f8a3811bfb80f45793d4b9b4671b111d",
+      "f4ecb406bae7d0e93099c2441261e764f954a184c3575557bafc7a1bc261a45a",
+      "f9d10a7c1383ede5705fb3b55c85ae3f3a0cf1dd1dd5f0c6fd0c03d55840e251"
+    ]
+  }
+}

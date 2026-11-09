@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "cpu-fixture": {
+      "kind": "cpu",
+      "architecture": "any",
+      "python": "3.11.15",
+      "cuda": null,
+      "driver": null,
+      "compiler": {"command": null, "major": null}
+    },
+    "cuda12-x86_64": {
+      "kind": "cuda",
+      "architecture": "x86_64",
+      "python": "3.11.15",
+      "cuda": {
+        "major": 12,
+        "minor": 8,
+        "source": "torch",
+        "pytorch_index": "https://download.pytorch.org/whl/cu128",
+        "toolkit_path": "/usr/local/cuda-12.8"
+      },
+      "driver": {"minimum": "570.26"},
+      "compiler": {"command": "gcc", "cxx_command": "g++", "major": 13}
+    }
+  }
+}

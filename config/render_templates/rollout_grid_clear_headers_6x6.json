@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "clear-headers-6x6",
+  "description": "Thirty-rollout 1920x1080 grid with dedicated headers and a full-width summary row.",
+  "video_glob": "*/run_*/*.mp4",
+  "expected_videos": 30,
+  "input_frame_wh": [640, 480],
+  "fps_mode": "source",
+  "poster_frame_mode": "middle",
+  "codec_preference": ["mp4v", "avc1"],
+  "geometry": {
+    "canvas_wh": [1920, 1080],
+    "columns": 6,
+    "rows": 6,
+    "rollout_cells": 30,
+    "cell_wh": [320, 180],
+    "header_height": 24,
+    "source_xywh_within_cell": [56, 24, 208, 156],
+    "summary_xywh": [0, 900, 1920, 180]
+  },
+  "metrics": {
+    "success_field": "new_final_success",
+    "score_field": "score_best"
+  },
+  "style": {
+    "canvas_bgr": [0, 0, 0],
+    "header_bgr": [245, 245, 245],
+    "header_text_bgr": [25, 25, 25],
+    "success_text_bgr": [45, 145, 45],
+    "summary_bgr": [28, 28, 28],
+    "summary_text_bgr": [230, 230, 230],
+    "header_font_scale": 0.28,
+    "header_font_thickness": 1,
+    "summary_title_font_scale": 0.55,
+    "summary_body_font_scale": 0.38,
+    "summary_font_thickness": 1,
+    "summary_footer": "Labels use dedicated headers; rollout image pixels are unobscured."
+  }
+}

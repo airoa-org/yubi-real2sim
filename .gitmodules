@@ -1,0 +1,4 @@
+[submodule "third_party/GaussianWrapping"]
+	path = third_party/GaussianWrapping
+	url = https://github.com/airoa-org/GaussianWrapping.git
+	branch = main

@@ -1,0 +1,49 @@
+# Nominal YUBI gripper config; torque derived from the DYNAMIXEL XM430-W350 datasheet.
+#   Servo: XM430-W350-R (Current-based Position Control, Operating Mode 5).
+#   Stall torque 4.1 N·m @ stall current 2.3 A  ->  K_tau,nominal = 4.1/2.3 = 1.783 N·m/A.
+#   Goal Current = 0.400 A (400 mA, ~149 raw @ 0.00269 A/unit).
+#   => tau_max (servo output shaft) = 1.783 * 0.400 * torque_scale(1.0) = 0.7132 N·m / hand.
+#   This is the gearbox-OUTPUT torque; do NOT re-apply the internal gear ratio. YUBI external
+#   linkage to the 2 jaws is represented by the 0.5*tau split (-> 0.357 N·m per jaw).
+# kp/kd remain MuJoCo-tuned (datasheet does not fix them); current sim-working values kept.
+yubi:
+  action_mode: normalized_width      # from the real driver (runtime overrides to user_angle_rad when needed)
+  command_rate_hz: 10.0              # from the real driver
+  feedback_rate_hz: 60.0            # from the real driver
+  current_limit_A: 0.4              # from the real driver (Goal Current 400 mA)
+  strict_real_driver_wrap_compat: false
+  model_joint_space: user
+
+  controller:
+    kp: 120.0                        # SIM_TUNED (MuJoCo free-space response; datasheet leaves open)
+    ki: 0.0
+    kd: 6.0                          # SIM_TUNED
+    torque_limit_Nm: null            # use effective_torque_per_amp * current_limit_A * torque_scale instead
+    effective_torque_per_amp: 1.783  # DERIVED_FROM_SPEC (XM430-W350 stall 4.1 N·m / 2.3 A), nominal K_tau
+    torque_scale: 1.0                # SIM_TUNED correction s_tau (raise to increase grip force / reduce slip)
+    torque_limit_close_Nm: null
+    torque_limit_open_Nm: null
+    velocity_limit_rad_s: null       # profile disabled (not measured)
+    acceleration_limit_rad_s2: null
+    current_response_time_constant_s: 0.0
+    integral_limit: null
+
+  left:
+    direction: -1.0                  # from the real driver (motor_id 1)
+    position_offset_rad: 0.120       # from the real driver
+    max_open_user_rad: 0.8           # from the real driver
+    command_delay_s: 0.0
+    motor_joints: [L_finger_joint_left, L_finger_joint_right]
+    motor_actuators: [L_finger_l, L_finger_r]
+    user_to_joint_scale: 1.0         # SIM_TUNED (runtime may override to identity)
+    joint_max_rad: 0.7854
+
+  right:
+    direction: -1.0                  # from the real driver (motor_id 2)
+    position_offset_rad: 0.186       # from the real driver
+    max_open_user_rad: 1.0           # from the real driver
+    command_delay_s: 0.0
+    motor_joints: [R_finger_joint_left, R_finger_joint_right]
+    motor_actuators: [R_finger_l, R_finger_r]
+    user_to_joint_scale: 0.7854      # SIM_TUNED (runtime may override to identity)
+    joint_max_rad: 0.7854

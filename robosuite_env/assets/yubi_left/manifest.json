@@ -1,0 +1,1811 @@
+{
+  "coacd_threshold": 0.05,
+  "collada_namespace": "http://www.collada.org/2005/11/COLLADASchema",
+  "parts": [
+    {
+      "bounds": {
+        "max": [
+          0.02625,
+          0.01425,
+          -0.0011
+        ],
+        "min": [
+          -0.02025,
+          -0.01425,
+          -0.039
+        ]
+      },
+      "collision_hulls": 43,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry0.obj",
+      "gid": "geometry0",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 40926,
+      "nverts": 20473,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry0.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.02499736,
+          0.009999991,
+          0.029
+        ],
+        "min": [
+          0.005002638,
+          -0.009999991,
+          -0.003
+        ]
+      },
+      "collision_hulls": 58,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry1.obj",
+      "gid": "geometry1",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 5422,
+      "nverts": 2705,
+      "rgba": [
+        0.769,
+        0.702,
+        0.82,
+        1.0
+      ],
+      "visual_obj": "visual/geometry1.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.0215,
+          0.00649798,
+          0.0291
+        ],
+        "min": [
+          0.0085,
+          -0.00649798,
+          0.0241
+        ]
+      },
+      "collision_hulls": 50,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry2.obj",
+      "gid": "geometry2",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 3024,
+      "nverts": 1512,
+      "rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry2.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.02,
+          0.004998446,
+          0.024
+        ],
+        "min": [
+          0.01,
+          -0.004998446,
+          0.023
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry3.obj",
+      "gid": "geometry3",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1008,
+      "nverts": 504,
+      "rgba": [
+        0.824,
+        0.824,
+        1.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry3.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.01100005,
+          0.003999892,
+          0.029
+        ],
+        "min": [
+          -0.01899999,
+          -0.003999991,
+          -0.003
+        ]
+      },
+      "collision_hulls": 11,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry4.obj",
+      "gid": "geometry4",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 5994,
+      "nverts": 2999,
+      "rgba": [
+        0.769,
+        0.702,
+        0.82,
+        1.0
+      ],
+      "visual_obj": "visual/geometry4.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.0085,
+          0.00649798,
+          0.0291
+        ],
+        "min": [
+          -0.0215,
+          -0.00649798,
+          0.0241
+        ]
+      },
+      "collision_hulls": 53,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry5.obj",
+      "gid": "geometry5",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 3024,
+      "nverts": 1512,
+      "rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry5.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.01,
+          0.004998446,
+          0.024
+        ],
+        "min": [
+          -0.02,
+          -0.004998446,
+          0.023
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry6.obj",
+      "gid": "geometry6",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1008,
+      "nverts": 504,
+      "rgba": [
+        0.824,
+        0.824,
+        1.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry6.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.0335,
+          0.015,
+          0.004
+        ],
+        "min": [
+          -0.032,
+          -0.017,
+          -0.041
+        ]
+      },
+      "collision_hulls": 20,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry7.obj",
+      "gid": "geometry7",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 3920,
+      "nverts": 1944,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry7.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.01000004,
+          0.004998889,
+          0.003
+        ],
+        "min": [
+          -0.01999996,
+          -0.004998889,
+          0.002
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry8.obj",
+      "gid": "geometry8",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1008,
+      "nverts": 504,
+      "rgba": [
+        0.824,
+        0.824,
+        1.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry8.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.0085,
+          0.00649798,
+          0.0022
+        ],
+        "min": [
+          -0.0215,
+          -0.00649798,
+          -0.0028
+        ]
+      },
+      "collision_hulls": 51,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry9.obj",
+      "gid": "geometry9",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 3024,
+      "nverts": 1512,
+      "rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry9.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.0335,
+          0.016,
+          0.03
+        ],
+        "min": [
+          -0.0335,
+          -0.025,
+          0.015
+        ]
+      },
+      "collision_hulls": 67,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry10.obj",
+      "gid": "geometry10",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 9466,
+      "nverts": 4717,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry10.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.017,
+          0.01,
+          0.0736946
+        ],
+        "min": [
+          -0.017,
+          -0.018,
+          0.03
+        ]
+      },
+      "collision_hulls": 51,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry11.obj",
+      "gid": "geometry11",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 3270,
+      "nverts": 1625,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry11.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.03175,
+          -0.0127507,
+          0.0295
+        ],
+        "min": [
+          0.02725,
+          -0.0172493,
+          0.012
+        ]
+      },
+      "collision_hulls": 8,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry12.obj",
+      "gid": "geometry12",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2206,
+      "nverts": 1105,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry12.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.02725,
+          -0.0127507,
+          0.0295
+        ],
+        "min": [
+          -0.03175,
+          -0.0172493,
+          0.012
+        ]
+      },
+      "collision_hulls": 8,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry13.obj",
+      "gid": "geometry13",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2206,
+      "nverts": 1105,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry13.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.00225,
+          0.0152493,
+          0.0295
+        ],
+        "min": [
+          -0.00225,
+          0.0107507,
+          0.012
+        ]
+      },
+      "collision_hulls": 8,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry14.obj",
+      "gid": "geometry14",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2206,
+      "nverts": 1105,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry14.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.034,
+          0.004999881,
+          0.002
+        ],
+        "min": [
+          0.0285,
+          0.001000119,
+          -0.002
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry15.obj",
+      "gid": "geometry15",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1826,
+      "nverts": 915,
+      "rgba": [
+        0.769,
+        0.702,
+        0.82,
+        1.0
+      ],
+      "visual_obj": "visual/geometry15.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.034,
+          -0.01100012,
+          0.002
+        ],
+        "min": [
+          0.0285,
+          -0.01499988,
+          -0.002
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry16.obj",
+      "gid": "geometry16",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1826,
+      "nverts": 915,
+      "rgba": [
+        0.769,
+        0.702,
+        0.82,
+        1.0
+      ],
+      "visual_obj": "visual/geometry16.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.027,
+          0.006999881,
+          -0.0015
+        ],
+        "min": [
+          -0.031,
+          0.003000119,
+          -0.007
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry17.obj",
+      "gid": "geometry17",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1826,
+      "nverts": 915,
+      "rgba": [
+        0.769,
+        0.702,
+        0.82,
+        1.0
+      ],
+      "visual_obj": "visual/geometry17.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.027,
+          -0.01100012,
+          -0.0015
+        ],
+        "min": [
+          -0.031,
+          -0.01499988,
+          -0.007
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry18.obj",
+      "gid": "geometry18",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1826,
+      "nverts": 915,
+      "rgba": [
+        0.769,
+        0.702,
+        0.82,
+        1.0
+      ],
+      "visual_obj": "visual/geometry18.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.02525,
+          0.0132493,
+          -0.026
+        ],
+        "min": [
+          0.02075,
+          0.008750699,
+          -0.0435
+        ]
+      },
+      "collision_hulls": 10,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry19.obj",
+      "gid": "geometry19",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2206,
+      "nverts": 1105,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry19.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.02525,
+          -0.008750699,
+          -0.026
+        ],
+        "min": [
+          0.02075,
+          -0.0132493,
+          -0.0435
+        ]
+      },
+      "collision_hulls": 10,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry20.obj",
+      "gid": "geometry20",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2206,
+      "nverts": 1105,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry20.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.01475,
+          0.0132493,
+          -0.026
+        ],
+        "min": [
+          -0.01925,
+          0.008750699,
+          -0.0435
+        ]
+      },
+      "collision_hulls": 10,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry21.obj",
+      "gid": "geometry21",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2206,
+      "nverts": 1105,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry21.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.01475,
+          -0.008750699,
+          -0.026
+        ],
+        "min": [
+          -0.01925,
+          -0.0132493,
+          -0.0435
+        ]
+      },
+      "collision_hulls": 10,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry22.obj",
+      "gid": "geometry22",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2206,
+      "nverts": 1105,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry22.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.00225,
+          -0.01175041,
+          0.034
+        ],
+        "min": [
+          -0.00225,
+          -0.01624959,
+          0.0275
+        ]
+      },
+      "collision_hulls": 12,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry23.obj",
+      "gid": "geometry23",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2178,
+      "nverts": 1091,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry23.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.00225,
+          0.00824959,
+          0.034
+        ],
+        "min": [
+          -0.00225,
+          0.00375041,
+          0.0275
+        ]
+      },
+      "collision_hulls": 11,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry24.obj",
+      "gid": "geometry24",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2178,
+      "nverts": 1091,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry24.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.01624997,
+          0.001876706,
+          0.07198293
+        ],
+        "min": [
+          0.01175003,
+          -0.005053579,
+          0.06714914
+        ]
+      },
+      "collision_hulls": 22,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry25.obj",
+      "gid": "geometry25",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2178,
+      "nverts": 1091,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry25.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.01175,
+          -0.002985474,
+          0.04440849
+        ],
+        "min": [
+          -0.01625,
+          -0.009915713,
+          0.03957433
+        ]
+      },
+      "collision_hulls": 22,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry26.obj",
+      "gid": "geometry26",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2178,
+      "nverts": 1091,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry26.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.03114933,
+          -0.02,
+          0.0279
+        ],
+        "min": [
+          0.02635067,
+          -0.025,
+          0.0231
+        ]
+      },
+      "collision_hulls": 79,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry27.obj",
+      "gid": "geometry27",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 3336,
+      "nverts": 1668,
+      "rgba": [
+        0.98,
+        0.745,
+        0.278,
+        1.0
+      ],
+      "visual_obj": "visual/geometry27.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.02635067,
+          -0.02,
+          0.0279
+        ],
+        "min": [
+          -0.03114933,
+          -0.025,
+          0.0231
+        ]
+      },
+      "collision_hulls": 81,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry28.obj",
+      "gid": "geometry28",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 3336,
+      "nverts": 1668,
+      "rgba": [
+        0.98,
+        0.745,
+        0.278,
+        1.0
+      ],
+      "visual_obj": "visual/geometry28.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.02439933,
+          -0.015,
+          0.004399998
+        ],
+        "min": [
+          0.01960067,
+          -0.02,
+          -0.0003999979
+        ]
+      },
+      "collision_hulls": 84,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry29.obj",
+      "gid": "geometry29",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 3336,
+      "nverts": 1668,
+      "rgba": [
+        0.98,
+        0.745,
+        0.278,
+        1.0
+      ],
+      "visual_obj": "visual/geometry29.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.01960067,
+          -0.015,
+          0.004399998
+        ],
+        "min": [
+          -0.02439933,
+          -0.02,
+          -0.0003999979
+        ]
+      },
+      "collision_hulls": 85,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry30.obj",
+      "gid": "geometry30",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 3336,
+      "nverts": 1668,
+      "rgba": [
+        0.98,
+        0.745,
+        0.278,
+        1.0
+      ],
+      "visual_obj": "visual/geometry30.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.03165,
+          -0.01285067,
+          0.018
+        ],
+        "min": [
+          0.02735,
+          -0.01714933,
+          0.014
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry31.obj",
+      "gid": "geometry31",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1264,
+      "nverts": 632,
+      "rgba": [
+        0.98,
+        0.745,
+        0.278,
+        1.0
+      ],
+      "visual_obj": "visual/geometry31.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.02735,
+          -0.01285067,
+          0.018
+        ],
+        "min": [
+          -0.03165,
+          -0.01714933,
+          0.014
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry32.obj",
+      "gid": "geometry32",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1264,
+      "nverts": 632,
+      "rgba": [
+        0.98,
+        0.745,
+        0.278,
+        1.0
+      ],
+      "visual_obj": "visual/geometry32.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.00215,
+          0.01514933,
+          0.018
+        ],
+        "min": [
+          -0.00215,
+          0.01085067,
+          0.014
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry33.obj",
+      "gid": "geometry33",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1264,
+      "nverts": 632,
+      "rgba": [
+        0.98,
+        0.745,
+        0.278,
+        1.0
+      ],
+      "visual_obj": "visual/geometry33.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.00215,
+          0.008149332,
+          0.03
+        ],
+        "min": [
+          -0.00215,
+          0.003850668,
+          0.026
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry34.obj",
+      "gid": "geometry34",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1264,
+      "nverts": 632,
+      "rgba": [
+        0.98,
+        0.745,
+        0.278,
+        1.0
+      ],
+      "visual_obj": "visual/geometry34.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.00215,
+          -0.01185067,
+          0.03
+        ],
+        "min": [
+          -0.00215,
+          -0.01614933,
+          0.026
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry35.obj",
+      "gid": "geometry35",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1264,
+      "nverts": 632,
+      "rgba": [
+        0.98,
+        0.745,
+        0.278,
+        1.0
+      ],
+      "visual_obj": "visual/geometry35.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.0315,
+          0.004649771,
+          0.00164977
+        ],
+        "min": [
+          0.0285,
+          0.00135023,
+          -0.00164977
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry36.obj",
+      "gid": "geometry36",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2600,
+      "nverts": 1300,
+      "rgba": [
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry36.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.0315,
+          -0.01135023,
+          0.00164977
+        ],
+        "min": [
+          0.0285,
+          -0.01464977,
+          -0.00164977
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry37.obj",
+      "gid": "geometry37",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2600,
+      "nverts": 1300,
+      "rgba": [
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry37.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.02735023,
+          0.006649771,
+          -0.001
+        ],
+        "min": [
+          -0.03064977,
+          0.00335023,
+          -0.004
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry38.obj",
+      "gid": "geometry38",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2600,
+      "nverts": 1300,
+      "rgba": [
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry38.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.02735023,
+          -0.01135023,
+          -0.001
+        ],
+        "min": [
+          -0.03064977,
+          -0.01464977,
+          -0.004
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry39.obj",
+      "gid": "geometry39",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 2600,
+      "nverts": 1300,
+      "rgba": [
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry39.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.01500042,
+          -0.016,
+          0.02299958
+        ],
+        "min": [
+          -0.01799958,
+          -0.024,
+          0.02000042
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry40.obj",
+      "gid": "geometry40",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1600,
+      "nverts": 802,
+      "rgba": [
+        0.769,
+        0.702,
+        0.82,
+        1.0
+      ],
+      "visual_obj": "visual/geometry40.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.018,
+          -0.016,
+          0.0229999
+        ],
+        "min": [
+          0.015,
+          -0.024,
+          0.0200001
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/geometry41.obj",
+      "gid": "geometry41",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1358,
+      "nverts": 681,
+      "rgba": [
+        0.769,
+        0.702,
+        0.82,
+        1.0
+      ],
+      "visual_obj": "visual/geometry41.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.016,
+          0.01364124,
+          0.07201519
+        ],
+        "min": [
+          -0.016,
+          -0.01363924,
+          0.04022351
+        ]
+      },
+      "collision_hulls": 52,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry42.obj",
+      "gid": "geometry42",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 4294,
+      "nverts": 2141,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry42.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.0335,
+          0.016,
+          0.018
+        ],
+        "min": [
+          -0.0335,
+          -0.02,
+          -0.004
+        ]
+      },
+      "collision_hulls": 75,
+      "collision_method": "coacd",
+      "collision_obj": "coll/geometry43.obj",
+      "gid": "geometry43",
+      "group": "body",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 13288,
+      "nverts": 6640,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/geometry43.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.0009997108,
+          0.01593993,
+          0.019
+        ],
+        "min": [
+          -0.03099971,
+          -0.01593993,
+          0.003
+        ]
+      },
+      "collision_hulls": 69,
+      "collision_method": "coacd",
+      "collision_obj": "coll/dyn_l_finger_l__geometry0.obj",
+      "gid": "dyn_l_finger_l__geometry0",
+      "group": "L_jaw",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 11146,
+      "nverts": 5571,
+      "rgba": [
+        0.769,
+        0.702,
+        0.82,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_l_finger_l__geometry0.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.003174993,
+          -0.003393487,
+          0.009
+        ],
+        "min": [
+          -0.007397758,
+          -0.007981513,
+          0.005
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/dyn_l_finger_l__geometry1.obj",
+      "gid": "dyn_l_finger_l__geometry1",
+      "group": "L_jaw",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1810,
+      "nverts": 907,
+      "rgba": [
+        0.769,
+        0.702,
+        0.82,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_l_finger_l__geometry1.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.002000496,
+          0.064,
+          0.023
+        ],
+        "min": [
+          -0.028,
+          -0.01299727,
+          0.003
+        ]
+      },
+      "collision_hulls": 10,
+      "collision_method": "coacd",
+      "collision_obj": "coll/dyn_l_finger_l__geometry2.obj",
+      "gid": "dyn_l_finger_l__geometry2",
+      "group": "L_jaw",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 3584,
+      "nverts": 1780,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_l_finger_l__geometry2.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.016,
+          0.07,
+          0.025
+        ],
+        "min": [
+          -0.046,
+          0.02,
+          0.004
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/dyn_l_finger_l__geometry3.obj",
+      "gid": "dyn_l_finger_l__geometry3",
+      "group": "L_jaw",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1546,
+      "nverts": 771,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_l_finger_l__geometry3.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.0181,
+          0.0329,
+          0.027
+        ],
+        "min": [
+          -0.0219,
+          0.02910062,
+          0.019
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/dyn_l_finger_l__geometry4.obj",
+      "gid": "dyn_l_finger_l__geometry4",
+      "group": "L_jaw",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1742,
+      "nverts": 873,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_l_finger_l__geometry4.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.0181,
+          0.0509,
+          0.027
+        ],
+        "min": [
+          -0.0219,
+          0.04710062,
+          0.019
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/dyn_l_finger_l__geometry5.obj",
+      "gid": "dyn_l_finger_l__geometry5",
+      "group": "L_jaw",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1742,
+      "nverts": 873,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_l_finger_l__geometry5.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.01,
+          0.105,
+          0.023
+        ],
+        "min": [
+          -0.024,
+          0.0215,
+          -0.007000002
+        ]
+      },
+      "collision_hulls": 20,
+      "collision_method": "coacd",
+      "collision_obj": "coll/dyn_l_finger_l__geometry6.obj",
+      "gid": "dyn_l_finger_l__geometry6",
+      "group": "L_jaw",
+      "is_red_body": true,
+      "is_rubber": false,
+      "nfaces": 9018,
+      "nverts": 4507,
+      "rgba": [
+        0.502,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_l_finger_l__geometry6.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          -0.0085,
+          0.1051453,
+          0.023
+        ],
+        "min": [
+          -0.01549868,
+          0.02182917,
+          -0.007
+        ]
+      },
+      "collision_hulls": 6,
+      "collision_method": "coacd",
+      "collision_obj": "coll/dyn_l_finger_l__geometry7.obj",
+      "gid": "dyn_l_finger_l__geometry7",
+      "group": "L_jaw",
+      "is_red_body": false,
+      "is_rubber": true,
+      "nfaces": 7100,
+      "nverts": 3552,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_l_finger_l__geometry7.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.03093993,
+          0.016,
+          0.019
+        ],
+        "min": [
+          -0.0009399277,
+          -0.016,
+          0.003
+        ]
+      },
+      "collision_hulls": 59,
+      "collision_method": "coacd",
+      "collision_obj": "coll/dyn_r_finger_l__geometry0.obj",
+      "gid": "dyn_r_finger_l__geometry0",
+      "group": "R_jaw",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 11146,
+      "nverts": 5571,
+      "rgba": [
+        0.769,
+        0.702,
+        0.82,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_r_finger_l__geometry0.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.0275,
+          0.001999378,
+          0.009
+        ],
+        "min": [
+          0.0245,
+          -0.001999378,
+          0.005
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/dyn_r_finger_l__geometry1.obj",
+      "gid": "dyn_r_finger_l__geometry1",
+      "group": "R_jaw",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1810,
+      "nverts": 907,
+      "rgba": [
+        0.769,
+        0.702,
+        0.82,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_r_finger_l__geometry1.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.028,
+          0.064,
+          0.023
+        ],
+        "min": [
+          0.002000496,
+          -0.01299727,
+          0.003
+        ]
+      },
+      "collision_hulls": 10,
+      "collision_method": "coacd",
+      "collision_obj": "coll/dyn_r_finger_l__geometry2.obj",
+      "gid": "dyn_r_finger_l__geometry2",
+      "group": "R_jaw",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 3584,
+      "nverts": 1780,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_r_finger_l__geometry2.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.046,
+          0.07,
+          0.025
+        ],
+        "min": [
+          0.016,
+          0.02,
+          0.004
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/dyn_r_finger_l__geometry3.obj",
+      "gid": "dyn_r_finger_l__geometry3",
+      "group": "R_jaw",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1722,
+      "nverts": 859,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_r_finger_l__geometry3.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.0219,
+          0.0329,
+          0.027
+        ],
+        "min": [
+          0.0181,
+          0.02910062,
+          0.019
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/dyn_r_finger_l__geometry4.obj",
+      "gid": "dyn_r_finger_l__geometry4",
+      "group": "R_jaw",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1742,
+      "nverts": 873,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_r_finger_l__geometry4.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.0219,
+          0.0509,
+          0.027
+        ],
+        "min": [
+          0.0181,
+          0.04710062,
+          0.019
+        ]
+      },
+      "collision_hulls": 1,
+      "collision_method": "convex_hull",
+      "collision_obj": "coll/dyn_r_finger_l__geometry5.obj",
+      "gid": "dyn_r_finger_l__geometry5",
+      "group": "R_jaw",
+      "is_red_body": false,
+      "is_rubber": false,
+      "nfaces": 1742,
+      "nverts": 873,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_r_finger_l__geometry5.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.024,
+          0.105,
+          0.023
+        ],
+        "min": [
+          0.01,
+          0.0215,
+          0.003
+        ]
+      },
+      "collision_hulls": 13,
+      "collision_method": "coacd",
+      "collision_obj": "coll/dyn_r_finger_l__geometry6.obj",
+      "gid": "dyn_r_finger_l__geometry6",
+      "group": "R_jaw",
+      "is_red_body": true,
+      "is_rubber": false,
+      "nfaces": 8988,
+      "nverts": 4492,
+      "rgba": [
+        0.502,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_r_finger_l__geometry6.obj"
+    },
+    {
+      "bounds": {
+        "max": [
+          0.01549868,
+          0.1051453,
+          0.02310898
+        ],
+        "min": [
+          0.0085,
+          0.02182917,
+          0.003108984
+        ]
+      },
+      "collision_hulls": 6,
+      "collision_method": "coacd",
+      "collision_obj": "coll/dyn_r_finger_l__geometry7.obj",
+      "gid": "dyn_r_finger_l__geometry7",
+      "group": "R_jaw",
+      "is_red_body": false,
+      "is_rubber": true,
+      "nfaces": 6110,
+      "nverts": 3057,
+      "rgba": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_obj": "visual/dyn_r_finger_l__geometry7.obj"
+    }
+  ],
+  "source_dae": "external:YUBI_Gripper_DYNAMIXEL_left_use_assembled.dae",
+  "tiny_rule": {
+    "max_bbox_dim_lt_m": 0.005,
+    "nverts_lt": 1000
+  }
+}

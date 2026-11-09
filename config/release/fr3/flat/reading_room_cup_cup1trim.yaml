@@ -1,0 +1,191 @@
+schema_version: 2
+robot: fr3
+name: release-flat-reading-room-cupplate-cup1trim
+description: "Release evaluation, FR3 Flat cupplate cup1trim, in the public 3DGS scene 'Reading Room' (CC BY 4.0, see assets/public_scenes/). Runs 300 frames and scores the state at frame 299 with cup_above_plate_test lowest, as the published Flat cupplate evaluation did. Ten rollouts with fresh policy noise."
+runner:
+  mode: fast_parallel
+  repeats: 10
+  policy_batch_size: 2
+  frames: 300
+  max_wall_sec: 7200
+  expected_rollouts: 10
+policy:
+  python: '{repo_root}/.venv/bin/python'
+  checkpoint: '{inputs_root}/checkpoints/pi05_cup'
+  config_name: pi05_cup
+  config_source: deploy
+  action_horizon: 32
+  exec_steps: 16
+  noise_seed: 2026100192
+  deterministic_xla: true
+task:
+  objects: assets/initpose/fr3/flat/cup_cup1trim.json
+  instruction: Pick up the cup with your right hand and set it on the plate.
+  goal_condition: cup_on_plate
+  score_condition: cup_on_plate_contact_points
+  policy_image_episode: null
+scenes:
+- tag: franka_flat
+  path: '{inputs_root}/scenes/flat_reading_room'
+simulation:
+  deterministic: true
+  seed: 0
+  init_state: null
+  rf_overlap: 0
+  rf_overlap_sampler: single
+  rf_overlap_prev_weight: null
+  rf_overlap_step_shift: 0
+  grip_torque_mult: 0.5
+  gripper_calibration: '{repo_root}/assets/release/fr3/flat/cup/gripper_calib_rad.json'
+  fr3_controller: joint_ik
+  fr3_nullspace: home
+  yubi_controller: cbpc
+  parameters:
+    physics: dynamic
+    grasp_mode: rule
+    policy_anchor: ready
+    initial_arm_joints: fr3/flat/grip07
+    base_placement: '{repo_root}/assets/release/fr3/flat/cup/base_placement.json'
+    policy_image_source: sim
+    policy_image_resize: pad
+    policy_wrist_contrast: 0.7
+    policy_obs_inset: true
+    policy_delta_anchor: observation
+    policy_pose_source: sim
+    policy_image_index: infer
+    policy_image_loop: false
+    no_obs_gs: false
+    desk: scene
+    desk_world_aligned: true
+    dynamic_control_hz: 50
+    frame_hz: 10
+    dynamic_ready_sec: 12
+    joint_ik_max_velocity: 0.7
+    joint_ik_max_acceleration: 12
+    joint_ik_max_jerk: 120
+    joint_ik_nullspace_gain: 0.2
+    joint_ik_ready_position_tol_mm: 5
+    joint_ik_ready_orientation_tol_deg: 2
+    dynamic_subframes: 1
+    substeps: 10
+    mujoco_integrator: implicitfast
+    torque_scale: 1
+    grip_friction:
+    - 0.25
+    - 0.025
+    - 0.0001
+    rubber_friction:
+    - 1
+    - 0.05
+    - 0.0001
+    solref:
+    - 0.04
+    - 1
+    grip_priority: 1
+    rubber_solref:
+    - 0.005
+    - 1
+    rubber_solimp:
+    - 0.99
+    - 0.999
+    - 0.0001
+    rubber_priority: 3
+    cup_mass: 0
+    rule_grasp_hand: auto
+    rule_grasp_effort_eps: 0.001
+    rule_grasp_policy_eps_rad: 0.001
+    rule_grasp_release_eps_rad: 0.05
+    grasp_contact_tol_mm: 3
+    debug_grasp_contact: false
+    gs_render_timeout_sec: 30
+    gs_render_attempts: 3
+    gs_render_retry_delay_sec: 0.25
+    gs_calibration_world_offset:
+    - 0
+    - 0
+    - 0
+    success_contact_tol_mm: 3
+    success_contact_penetration_tol_mm: 5
+    success_place_contact_penetration_tol_mm: 15
+    success_plane_gap_tol_mm: 10
+    success_plane_penetration_tol_mm: 2
+    success_bottom_contact_tol_mm: 12
+    success_footprint_slack_mm: 3
+    success_upright_tol_deg: 35
+    success_mode: bbox
+    table_z: 0
+    world_offset:
+    - 0
+    - 0
+    - 0
+    ik_jump_reject: retry-hold
+    ik_jump_retries: 2
+    start_state_guard: fail
+    cup_above_plate_test: lowest
+render:
+  enabled: true
+  view_azimuth: 270
+  view_elevation: -20
+  view_distance: 1.35
+  view_lookat:
+  - 0.08
+  - 0.18
+  - 0.1
+  wrist: true
+  wrist_gs: false
+  origin: false
+  analysis: false
+  clean_video: false
+runtime:
+  server_host: 127.0.0.1
+  server_port: 26520
+  gs_port_base: 26530
+  gs_cuda_devices: '0'
+  policy_cuda_device: '0'
+  sim_cuda_devices: '0'
+  gs_start_timeout_sec: 600
+  sim_num_threads: 1
+  gaussian_wrapping_repo: '{repo_root}/third_party/GaussianWrapping'
+output:
+  root: '{repo_root}/outputs/release'
+  run_name: release-flat-reading-room-cupplate-cup1trim_{timestamp}
+reproducibility:
+  mode: fixture
+  artifact_manifest: '{repo_root}/artifacts/manifest.yaml'
+  artifacts:
+    checkpoint: pi05-cup
+    scene.franka_flat: public-scene-flat-reading-room-v2
+    runtime-assets: public-cup-plate-visual-v1
+    robot-assets: fr3-collision-franka-description-2fd6aaa8
+  lockfiles:
+  - '{repo_root}/uv.lock'
+  source_dependencies:
+  - '{repo_root}/third_party/openpi'
+  - '{repo_root}/third_party/GaussianWrapping'
+  - '{repo_root}/third_party/robosuite'
+  - '{repo_root}/third_party/franka_description'
+  support_matrix: '{repo_root}/config/support-matrix.yaml'
+  accelerator_profile: cuda12-x86_64
+  environment:
+    allowlist:
+    - HOME
+    - PATH
+    - LANG
+    - LC_ALL
+    - TZ
+    - TMPDIR
+    - LD_LIBRARY_PATH
+    - CUDA_HOME
+    - SSL_CERT_FILE
+    - SSL_CERT_DIR
+    - REAL2SIM_INPUTS_ROOT
+    - CUDA_VISIBLE_DEVICES
+    - XLA_PYTHON_CLIENT_MEM_FRACTION
+    - XLA_PYTHON_CLIENT_ALLOCATOR
+    required:
+    - HOME
+    - PATH
+    - REAL2SIM_INPUTS_ROOT
+    values:
+      XLA_PYTHON_CLIENT_MEM_FRACTION: '0.45'
+      XLA_PYTHON_CLIENT_ALLOCATOR: cuda_async

@@ -1,0 +1,91 @@
+{
+  "coordinate_convention": {
+    "axes": {
+      "x": "right",
+      "y": "away_from_operator",
+      "z": "up"
+    },
+    "handedness": "right",
+    "object_origin": "bottom centre of the collision hull set",
+    "pose": "T_table_object",
+    "position_unit": "m",
+    "quaternion_order": "wxyz"
+  },
+  "frame": "table",
+  "objects": {
+    "box": {
+      "asset": "box",
+      "position_m": [
+        0.035,
+        -0.85,
+        0.0
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass_kg": 0.1
+    },
+    "lan": {
+      "asset": "lan",
+      "position_m": [
+        0.18,
+        -0.57,
+        0.0
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mass_kg": 0.01
+    },
+    "pen": {
+      "asset": "pen",
+      "position_m": [
+        -0.09,
+        -0.56,
+        0.0
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mass_kg": 0.01
+    },
+    "tape": {
+      "asset": "tape",
+      "position_m": [
+        0.03,
+        -0.575,
+        0.0
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mass_kg": 0.024
+    }
+  },
+  "schema_version": 1,
+  "source": {
+    "board_view": "board85",
+    "initial_arm_joints": "duo_init_high",
+    "kind": "manual_placement",
+    "placed_at": "2026-09-12T03:46:40.362Z",
+    "placed_by": "manual placement on the Duo table placement board",
+    "position_step_m": 0.005,
+    "scene": "franka_duo",
+    "yaw_step_deg": 5,
+    "tool": "interactive placement board (not distributed with this repository)",
+    "rationale": "Placed by hand on the placement board, over a photoreal render of this scene with the robot composited over it, in the scene's own world frame. A chosen arrangement, not a measurement.",
+    "mass_source": "measured on the real objects and entered on the placement board; the MJCF meshes carry a density instead, which overstates most of these"
+  }
+}

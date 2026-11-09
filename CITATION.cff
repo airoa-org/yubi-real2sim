@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the paper below."
+title: "YUBI-Real2Sim"
+type: software
+authors:
+  - name: "AI Robot Association (AIRoA)"
+    email: ext-oss@airoa.org
+repository-code: "https://github.com/airoa-org/yubi-real2sim"
+url: "https://arxiv.org/abs/2610.17521"
+license: Apache-2.0
+preferred-citation:
+  type: article
+  title: "YUBI-Real2Sim: 3DGS Scene Verification for Reliable Policy Evaluation"
+  authors:
+    - family-names: Nishizawa
+      given-names: Hiroki
+    - family-names: Ohkawa
+      given-names: Takehiko
+    - family-names: Scianca
+      given-names: Nicola
+    - family-names: Matsushima
+      given-names: Tatsuya
+    - family-names: Morishima
+      given-names: Shigeo
+    - family-names: Ota
+      given-names: Kei
+  journal: "arXiv preprint arXiv:2610.17521"
+  year: 2026
+  url: "https://arxiv.org/abs/2610.17521"
+  identifiers:
+    - type: other
+      value: "arXiv:2610.17521"
+references:
+  - type: article
+    title: "robosuite: A Modular Simulation Framework and Benchmark for Robot Learning"
+    authors:
+      - family-names: Zhu
+        given-names: Yuke
+      - family-names: Wong
+        given-names: Josiah
+      - family-names: Mandlekar
+        given-names: Ajay
+      - family-names: Martín-Martín
+        given-names: Roberto
+      - family-names: Joshi
+        given-names: Abhishek
+      - family-names: Nasiriany
+        given-names: Soroush
+      - family-names: Zhu
+        given-names: Yifeng
+      - family-names: Lin
+        given-names: Kevin
+    journal: "arXiv preprint arXiv:2009.12293"
+    year: 2020
+    url: "https://robosuite.ai"

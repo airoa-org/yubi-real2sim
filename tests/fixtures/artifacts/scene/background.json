@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "id": "tiny-fixture-scene-v2",
+  "name": "tiny_fixture_scene",
+  "ply_path": "point_cloud.ply",
+  "ply_sha256": "bfb923d2c48bd8c8103813a66b52b03c582a609cab6e986db4c794891ec99f24",
+  "w2gs": "world_to_gs.txt",
+  "w2gs_sha256": "c8fd36bfe88ef26697077842abe6f2cb73f31074b2cb73476d0e5bc20442b8da",
+  "calibration_table_z_m": 0.0,
+  "calibration_table_z_method": "ply-plane-fit-v1",
+  "table": {
+    "appearance": "embedded_in_3dgs",
+    "collision": {
+      "directory": "../registered-desk/coacd",
+      "glob": "*.obj",
+      "count": 1,
+      "tree_sha256": "de2f01124c20f67894810b1eeeedfed2fe614225dc847a0817f7dbadec1e9998",
+      "frame": "mujoco_world"
+    }
+  }
+}

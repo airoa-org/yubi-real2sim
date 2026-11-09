@@ -1,0 +1,205 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yubi-real2sim"
+version = "0.1.0"
+description = "YUBI-Real2Sim: reproducible Real2Sim rollout and publication tooling"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [{ name = "AI Robot Association (AIRoA)", email = "ext-oss@airoa.org" }]
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES"]
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    # Runtime source packages. uv.lock records each Git source at a full commit;
+    # bootstrap also materializes the runtime checkouts that launchers inspect.
+    # OpenPI and robosuite are not among them: each runs from its installed
+    # distribution, and real2sim.locked_imports refuses any other.
+    "openpi",
+    "lerobot",
+    "robosuite",
+    "torch==2.7.1",
+    "torchvision==0.22.1",
+
+    # Exact runtime pins. Keep these exact: this
+    # project owns the combined OpenPI / LeRobot / robosuite environment.
+    "mujoco==3.8.1",
+    # openpi e6b0441 imports chex (fsq_tokenizer) without declaring it.
+    "chex==0.1.89",
+    "gym-aloha==0.1.3",
+    "gymnasium==0.29.1",
+    "fsspec==2025.3.0",
+    "protobuf==4.25.8",
+    "qpsolvers[quadprog]==4.13.0",
+    "ruckig==0.19.4",
+    "fast-simplification==0.1.13",
+    "opencv-python==4.11.0.86",
+    "Flask==3.1.3",
+    "numpy==1.26.4",
+    "ImageIO==2.37.3",
+    "imageio-ffmpeg==0.6.0",
+    "matplotlib==3.11.0",
+    "msgpack==1.1.2",
+    # The release installer downloads the checkpoints and scenes with it; the
+    # same version is already locked through LeRobot and Transformers.
+    "huggingface-hub==0.36.2",
+    "pandas==3.0.3",
+    "pyarrow==24.0.0",
+    "Pillow==12.2.0",
+    "plyfile==1.1",
+    "psutil==7.2.2",
+    "PyYAML==6.0.3",
+    "requests==2.34.2",
+    "scipy==1.17.1",
+    "tqdm==4.68.2",
+    "trimesh==4.12.2",
+    "websockets==16.0",
+
+    # Pinned build backends are installed into the target environment because
+    # tool.uv.no-build-isolation-package builds the source packages there.
+    "setuptools==80.9.0",
+    "hatchling==1.27.0",
+    "editables==0.5",
+    "poetry-core==2.1.3",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.0.3"]
+
+[dependency-groups]
+dev = [
+    "build==1.3.0",
+    "pytest==9.0.3",
+    "wheel==0.46.3",
+]
+# Built in place from third_party/GaussianWrapping; CPU-only syncs pass --no-group cuda-extensions.
+cuda-extensions = [
+    "diff-gaussian-rasterization",
+    "diff-gaussian-rasterization-ours",
+    "simple-knn",
+]
+# Reference model for tests/unit/robots/test_fr3_model_contract.py. Not a default
+# group, so bootstrap does not install it; the locked-runtime CI job syncs it.
+fr3-model-contract = [
+    "pin==2.7.0",
+    "xacro==2.1.1",
+]
+
+[project.scripts]
+real2sim-artifacts = "real2sim.artifacts:main"
+real2sim-doctor = "real2sim.doctor:main"
+real2sim-download-release = "real2sim.release_assets:cli"
+real2sim-run = "real2sim.launcher:main"
+
+[tool.setuptools]
+package-dir = {real2sim = "src/real2sim", robosuite_env = "robosuite_env", scene = "scene"}
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src", "."]
+include = ["real2sim", "real2sim.*", "robosuite_env", "robosuite_env.*", "scene", "scene.*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+robosuite_env = ["assets/wrist_rgb_calibration.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers"
+markers = [
+    "gpu: needs a GPU / EGL rendering context (excluded from clean-checkout CI)",
+    "heavy: needs a runtime dependency that requirements-lock.ci.txt does not install (mujoco, robosuite, ruckig, openpi, jax, matplotlib, pandas, msgpack, ...)",
+    "assets: needs git-ignored local asset bundles (local-inputs/, installed artifacts) that a clean checkout lacks",
+]
+
+[tool.ruff]
+extend-exclude = ["third_party/GaussianWrapping"]
+
+[tool.ruff.lint]
+select = ["F401", "F841"]
+
+[tool.vulture]
+paths = ["src", "robosuite_env", "scene", "scripts"]
+exclude = ["third_party/"]
+min_confidence = 60  # functions, classes, attributes and constants report at 60.
+
+[tool.uv]
+required-version = "==0.12.3"
+exclude-newer = "2026-08-02T00:00:00Z"
+environments = [
+    "sys_platform == 'linux' and platform_machine == 'x86_64'",
+]
+override-dependencies = [
+    "ml-dtypes==0.4.1",
+    "tensorstore==0.1.74",
+]
+default-groups = ["dev", "cuda-extensions"]
+concurrent-builds = 1
+no-build-isolation-package = [
+    "yubi-real2sim",
+    "openpi",
+    "openpi-client",
+    "lerobot",
+    "robosuite",
+    "diff-gaussian-rasterization",
+    "diff-gaussian-rasterization-ours",
+    "simple-knn",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
+openpi = { git = "https://github.com/Physical-Intelligence/openpi", rev = "e6b044115c075dc64a2e4e23d33ea3a3c293f123" }
+lerobot = { git = "https://github.com/huggingface/lerobot", rev = "0cf864870cf29f4738d3ade893e6fd13fbd7cdb5" }
+robosuite = { git = "https://github.com/ARISE-Initiative/robosuite", rev = "85abee228d1c43ab1939bce33028099945d453b4" }
+diff-gaussian-rasterization = { path = "third_party/GaussianWrapping/submodules/diff-gaussian-rasterization" }
+diff-gaussian-rasterization-ours = { path = "third_party/GaussianWrapping/submodules/diff-gaussian-rasterization_ours" }
+simple-knn = { path = "third_party/GaussianWrapping/submodules/simple-knn" }
+
+# Their setup.py imports torch, so uv lock needs static metadata.
+[[tool.uv.dependency-metadata]]
+name = "diff-gaussian-rasterization"
+version = "0.0.0"
+requires-dist = []
+
+[[tool.uv.dependency-metadata]]
+name = "diff-gaussian-rasterization-ours"
+version = "0.0.0"
+requires-dist = []
+
+[[tool.uv.dependency-metadata]]
+name = "simple-knn"
+version = "0.0.0"
+requires-dist = []
+
+# The header is found through the cfg's include_dirs, because torch's ninja backend
+# compiles from build/temp.*. uv rebuilds only when a literal here changes, so
+# REAL2SIM_BUILD_INPUTS digests the source pin, build adapter, profile, header and torch.
+[tool.uv.extra-build-variables.diff-gaussian-rasterization]
+CPPFLAGS = "-include gcc13_libstdcxx_compat.h"
+NVCC_PREPEND_FLAGS = "-include cstdint -include gcc13_libstdcxx_compat.h"
+DIST_EXTRA_CONFIG = "../../../../scripts/cuda_extension_build.cfg"
+PYTHONPATH = "../../../../scripts"
+REAL2SIM_BUILD_INPUTS = "65a389e0f6ff31a9"
+
+[tool.uv.extra-build-variables.diff-gaussian-rasterization-ours]
+CPPFLAGS = "-include gcc13_libstdcxx_compat.h"
+NVCC_PREPEND_FLAGS = "-include cstdint -include gcc13_libstdcxx_compat.h"
+DIST_EXTRA_CONFIG = "../../../../scripts/cuda_extension_build.cfg"
+PYTHONPATH = "../../../../scripts"
+REAL2SIM_BUILD_INPUTS = "65a389e0f6ff31a9"
+
+[tool.uv.extra-build-variables.simple-knn]
+CPPFLAGS = "-include gcc13_libstdcxx_compat.h"
+NVCC_PREPEND_FLAGS = "-include cfloat -include gcc13_libstdcxx_compat.h"
+DIST_EXTRA_CONFIG = "../../../../scripts/cuda_extension_build.cfg"
+PYTHONPATH = "../../../../scripts"
+REAL2SIM_BUILD_INPUTS = "65a389e0f6ff31a9"
+
+# Must match cuda12-x86_64.cuda.pytorch_index in config/support-matrix.yaml;
+# the distribution tests reject drift between this resolver input and the profile.
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

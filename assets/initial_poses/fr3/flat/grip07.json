@@ -1,0 +1,30 @@
+{
+  "signature": {"robot": "fr3", "rig": "flat", "scene": "franka_flat", "scenes": ["franka_flat"]},
+  "schema_version": 2,
+  "units": "rad",
+  "joint_order": ["j1", "j2", "j3", "j4", "j5", "j6", "j7"],
+  "left_arm": [
+    -0.279842,
+    0.236127,
+    0.138929,
+    -2.724325,
+    -0.994168,
+    3.990696,
+    1.053158
+  ],
+  "right_arm": [
+    0.813472,
+    0.242318,
+    -0.703255,
+    -2.770116,
+    0.957978,
+    3.838995,
+    0.744529
+  ],
+  "gripper": {
+    "coordinate": "raw",
+    "joint_order": ["hand_left_motor_joint", "hand_right_motor_joint"],
+    "left": 0.7,
+    "right": 0.7
+  }
+}

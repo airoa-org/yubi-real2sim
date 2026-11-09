@@ -1,0 +1,535 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="yubi_left">
+  <!--Finger hinge calibration: true servo output shaft pivots at L="-0.015 -0.013 0" and R="0.015 -0.013 0" with identity body quats; verified opening axes L="0 -1 0" R="0 1 0".-->
+  <compiler angle="radian" autolimits="true" />
+  <asset>
+    <mesh name="v2_vis_geometry0" file="yubi_left/visual_mj/geometry0.obj" />
+    <mesh name="v2_vis_geometry1" file="yubi_left/visual_mj/geometry1.obj" />
+    <mesh name="v2_vis_geometry2" file="yubi_left/visual_mj/geometry2.obj" />
+    <mesh name="v2_vis_geometry3" file="yubi_left/visual_mj/geometry3.obj" />
+    <mesh name="v2_vis_geometry4" file="yubi_left/visual_mj/geometry4.obj" />
+    <mesh name="v2_vis_geometry5" file="yubi_left/visual_mj/geometry5.obj" />
+    <mesh name="v2_vis_geometry6" file="yubi_left/visual_mj/geometry6.obj" />
+    <mesh name="v2_vis_geometry7" file="yubi_left/visual_mj/geometry7.obj" />
+    <mesh name="v2_vis_geometry8" file="yubi_left/visual_mj/geometry8.obj" />
+    <mesh name="v2_vis_geometry9" file="yubi_left/visual_mj/geometry9.obj" />
+    <mesh name="v2_vis_geometry10" file="yubi_left/visual_mj/geometry10.obj" />
+    <mesh name="v2_vis_geometry11" file="yubi_left/visual_mj/geometry11.obj" />
+    <mesh name="v2_vis_geometry12" file="yubi_left/visual_mj/geometry12.obj" />
+    <mesh name="v2_vis_geometry13" file="yubi_left/visual_mj/geometry13.obj" />
+    <mesh name="v2_vis_geometry14" file="yubi_left/visual_mj/geometry14.obj" />
+    <mesh name="v2_vis_geometry15" file="yubi_left/visual_mj/geometry15.obj" />
+    <mesh name="v2_vis_geometry16" file="yubi_left/visual_mj/geometry16.obj" />
+    <mesh name="v2_vis_geometry17" file="yubi_left/visual_mj/geometry17.obj" />
+    <mesh name="v2_vis_geometry18" file="yubi_left/visual_mj/geometry18.obj" />
+    <mesh name="v2_vis_geometry19" file="yubi_left/visual_mj/geometry19.obj" />
+    <mesh name="v2_vis_geometry20" file="yubi_left/visual_mj/geometry20.obj" />
+    <mesh name="v2_vis_geometry21" file="yubi_left/visual_mj/geometry21.obj" />
+    <mesh name="v2_vis_geometry22" file="yubi_left/visual_mj/geometry22.obj" />
+    <mesh name="v2_vis_geometry23" file="yubi_left/visual_mj/geometry23.obj" />
+    <mesh name="v2_vis_geometry24" file="yubi_left/visual_mj/geometry24.obj" />
+    <mesh name="v2_vis_geometry25" file="yubi_left/visual_mj/geometry25.obj" />
+    <mesh name="v2_vis_geometry26" file="yubi_left/visual_mj/geometry26.obj" />
+    <mesh name="v2_vis_geometry27" file="yubi_left/visual_mj/geometry27.obj" />
+    <mesh name="v2_vis_geometry28" file="yubi_left/visual_mj/geometry28.obj" />
+    <mesh name="v2_vis_geometry29" file="yubi_left/visual_mj/geometry29.obj" />
+    <mesh name="v2_vis_geometry30" file="yubi_left/visual_mj/geometry30.obj" />
+    <mesh name="v2_vis_geometry31" file="yubi_left/visual_mj/geometry31.obj" />
+    <mesh name="v2_vis_geometry32" file="yubi_left/visual_mj/geometry32.obj" />
+    <mesh name="v2_vis_geometry33" file="yubi_left/visual_mj/geometry33.obj" />
+    <mesh name="v2_vis_geometry34" file="yubi_left/visual_mj/geometry34.obj" />
+    <mesh name="v2_vis_geometry35" file="yubi_left/visual_mj/geometry35.obj" />
+    <mesh name="v2_vis_geometry36" file="yubi_left/visual_mj/geometry36.obj" />
+    <mesh name="v2_vis_geometry37" file="yubi_left/visual_mj/geometry37.obj" />
+    <mesh name="v2_vis_geometry38" file="yubi_left/visual_mj/geometry38.obj" />
+    <mesh name="v2_vis_geometry39" file="yubi_left/visual_mj/geometry39.obj" />
+    <mesh name="v2_vis_geometry40" file="yubi_left/visual_mj/geometry40.obj" />
+    <mesh name="v2_vis_geometry41" file="yubi_left/visual_mj/geometry41.obj" />
+    <mesh name="v2_vis_geometry42" file="yubi_left/visual_mj/geometry42.obj" />
+    <mesh name="v2_vis_geometry43" file="yubi_left/visual_mj/geometry43.obj" />
+    <mesh name="v2_vis_dyn_l_finger_r__geometry0" file="yubi_left/visual_mj/dyn_l_finger_l__geometry0.obj" />
+    <mesh name="v2_vis_dyn_l_finger_r__geometry1" file="yubi_left/visual_mj/dyn_l_finger_l__geometry1.obj" />
+    <mesh name="v2_vis_dyn_l_finger_r__geometry2" file="yubi_left/visual_mj/dyn_l_finger_l__geometry2.obj" />
+    <mesh name="v2_vis_dyn_l_finger_r__geometry3" file="yubi_left/visual_mj/dyn_l_finger_l__geometry3.obj" />
+    <mesh name="v2_vis_dyn_l_finger_r__geometry4" file="yubi_left/visual_mj/dyn_l_finger_l__geometry4.obj" />
+    <mesh name="v2_vis_dyn_l_finger_r__geometry5" file="yubi_left/visual_mj/dyn_l_finger_l__geometry5.obj" />
+    <mesh name="v2_vis_dyn_l_finger_r__geometry6" file="yubi_left/visual_mj/dyn_l_finger_l__geometry6.obj" />
+    <mesh name="v2_vis_dyn_l_finger_r__geometry7" file="yubi_left/visual_mj/dyn_l_finger_l__geometry7.obj" />
+    <mesh name="v2_vis_dyn_r_finger_r__geometry0" file="yubi_left/visual_mj/dyn_r_finger_l__geometry0.obj" />
+    <mesh name="v2_vis_dyn_r_finger_r__geometry1" file="yubi_left/visual_mj/dyn_r_finger_l__geometry1.obj" />
+    <mesh name="v2_vis_dyn_r_finger_r__geometry2" file="yubi_left/visual_mj/dyn_r_finger_l__geometry2.obj" />
+    <mesh name="v2_vis_dyn_r_finger_r__geometry3" file="yubi_left/visual_mj/dyn_r_finger_l__geometry3.obj" />
+    <mesh name="v2_vis_dyn_r_finger_r__geometry4" file="yubi_left/visual_mj/dyn_r_finger_l__geometry4.obj" />
+    <mesh name="v2_vis_dyn_r_finger_r__geometry5" file="yubi_left/visual_mj/dyn_r_finger_l__geometry5.obj" />
+    <mesh name="v2_vis_dyn_r_finger_r__geometry6" file="yubi_left/visual_mj/dyn_r_finger_l__geometry6.obj" />
+    <mesh name="v2_vis_dyn_r_finger_r__geometry7" file="yubi_left/visual_mj/dyn_r_finger_l__geometry7.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h000" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h000.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h001" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h001.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h002" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h002.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h003" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h003.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h004" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h004.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h005" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h005.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h006" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h006.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h007" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h007.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h008" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h008.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h009" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h009.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h010" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h010.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h011" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h011.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h012" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h012.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h013" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h013.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h014" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h014.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h015" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h015.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h016" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h016.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h017" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h017.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h018" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h018.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry6_h019" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry6_h019.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry7_h000" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry7_h000.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry7_h001" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry7_h001.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry7_h002" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry7_h002.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry7_h003" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry7_h003.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry7_h004" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry7_h004.obj" />
+    <mesh name="v2_coll_dyn_l_finger_l__geometry7_h005" file="yubi_left/coll_mj_hulls/dyn_l_finger_l__geometry7_h005.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h000" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h000.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h001" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h001.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h002" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h002.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h003" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h003.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h004" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h004.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h005" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h005.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h006" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h006.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h007" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h007.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h008" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h008.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h009" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h009.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h010" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h010.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h011" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h011.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry6_h012" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry6_h012.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry7_h000" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry7_h000.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry7_h001" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry7_h001.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry7_h002" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry7_h002.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry7_h003" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry7_h003.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry7_h004" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry7_h004.obj" />
+    <mesh name="v2_coll_dyn_r_finger_l__geometry7_h005" file="yubi_left/coll_mj_hulls/dyn_r_finger_l__geometry7_h005.obj" />
+    <!-- The left gripper uses the same mount meshes from the registered
+         Blender assembly in YUBI_physical_root coordinates as yubi_right.xml. -->
+    <mesh name="yubi_mount_flange" file="fr3_yubi_right_registered/visual/right_yubi_flange.obj" />
+    <mesh name="yubi_mount_attachment" file="fr3_yubi_right_registered/visual/right_yubi_attachment.obj" />
+    <mesh name="yubi_mount_flange_collision_h000" file="fr3_yubi_right_registered/collision/right_yubi_flange_h000.obj" />
+    <mesh name="yubi_mount_flange_collision_h001" file="fr3_yubi_right_registered/collision/right_yubi_flange_h001.obj" />
+    <mesh name="yubi_mount_flange_collision_h002" file="fr3_yubi_right_registered/collision/right_yubi_flange_h002.obj" />
+    <mesh name="yubi_mount_flange_collision_h003" file="fr3_yubi_right_registered/collision/right_yubi_flange_h003.obj" />
+    <mesh name="yubi_mount_flange_collision_h004" file="fr3_yubi_right_registered/collision/right_yubi_flange_h004.obj" />
+    <mesh name="yubi_mount_flange_collision_h005" file="fr3_yubi_right_registered/collision/right_yubi_flange_h005.obj" />
+    <mesh name="yubi_mount_flange_collision_h006" file="fr3_yubi_right_registered/collision/right_yubi_flange_h006.obj" />
+    <mesh name="yubi_mount_flange_collision_h007" file="fr3_yubi_right_registered/collision/right_yubi_flange_h007.obj" />
+    <mesh name="yubi_mount_flange_collision_h008" file="fr3_yubi_right_registered/collision/right_yubi_flange_h008.obj" />
+    <mesh name="yubi_mount_flange_collision_h009" file="fr3_yubi_right_registered/collision/right_yubi_flange_h009.obj" />
+    <mesh name="yubi_mount_flange_collision_h010" file="fr3_yubi_right_registered/collision/right_yubi_flange_h010.obj" />
+    <mesh name="yubi_mount_flange_collision_h011" file="fr3_yubi_right_registered/collision/right_yubi_flange_h011.obj" />
+    <mesh name="yubi_mount_flange_collision_h012" file="fr3_yubi_right_registered/collision/right_yubi_flange_h012.obj" />
+    <mesh name="yubi_mount_flange_collision_h013" file="fr3_yubi_right_registered/collision/right_yubi_flange_h013.obj" />
+    <mesh name="yubi_mount_flange_collision_h014" file="fr3_yubi_right_registered/collision/right_yubi_flange_h014.obj" />
+    <mesh name="yubi_mount_flange_collision_h015" file="fr3_yubi_right_registered/collision/right_yubi_flange_h015.obj" />
+    <mesh name="yubi_mount_attachment_collision_h000" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h000.obj" />
+    <mesh name="yubi_mount_attachment_collision_h001" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h001.obj" />
+    <mesh name="yubi_mount_attachment_collision_h002" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h002.obj" />
+    <mesh name="yubi_mount_attachment_collision_h003" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h003.obj" />
+    <mesh name="yubi_mount_attachment_collision_h004" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h004.obj" />
+    <mesh name="yubi_mount_attachment_collision_h005" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h005.obj" />
+    <mesh name="yubi_mount_attachment_collision_h006" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h006.obj" />
+    <mesh name="yubi_mount_attachment_collision_h007" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h007.obj" />
+    <mesh name="yubi_mount_attachment_collision_h008" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h008.obj" />
+    <mesh name="yubi_mount_attachment_collision_h009" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h009.obj" />
+    <mesh name="yubi_mount_attachment_collision_h010" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h010.obj" />
+    <mesh name="yubi_mount_attachment_collision_h011" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h011.obj" />
+    <mesh name="yubi_mount_attachment_collision_h012" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h012.obj" />
+    <mesh name="yubi_mount_attachment_collision_h013" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h013.obj" />
+    <mesh name="yubi_mount_attachment_collision_h014" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h014.obj" />
+    <mesh name="yubi_mount_attachment_collision_h015" file="fr3_yubi_right_registered/collision/right_yubi_attachment_h015.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry0_proxy_h000" file="yubi_left/guard_collision/dyn_l_finger_l__geometry0_proxy_h000.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry0_proxy_h001" file="yubi_left/guard_collision/dyn_l_finger_l__geometry0_proxy_h001.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry0_proxy_h002" file="yubi_left/guard_collision/dyn_l_finger_l__geometry0_proxy_h002.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry0_proxy_h003" file="yubi_left/guard_collision/dyn_l_finger_l__geometry0_proxy_h003.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry1_convex" file="yubi_left/guard_collision/dyn_l_finger_l__geometry1_convex.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry2_proxy_h000" file="yubi_left/guard_collision/dyn_l_finger_l__geometry2_proxy_h000.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry2_proxy_h001" file="yubi_left/guard_collision/dyn_l_finger_l__geometry2_proxy_h001.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry2_proxy_h002" file="yubi_left/guard_collision/dyn_l_finger_l__geometry2_proxy_h002.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry2_proxy_h003" file="yubi_left/guard_collision/dyn_l_finger_l__geometry2_proxy_h003.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry2_proxy_h004" file="yubi_left/guard_collision/dyn_l_finger_l__geometry2_proxy_h004.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry2_proxy_h005" file="yubi_left/guard_collision/dyn_l_finger_l__geometry2_proxy_h005.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry2_proxy_h006" file="yubi_left/guard_collision/dyn_l_finger_l__geometry2_proxy_h006.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry2_proxy_h007" file="yubi_left/guard_collision/dyn_l_finger_l__geometry2_proxy_h007.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry3_convex" file="yubi_left/guard_collision/dyn_l_finger_l__geometry3_convex.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry4_convex" file="yubi_left/guard_collision/dyn_l_finger_l__geometry4_convex.obj" />
+    <mesh name="v2_guard_dyn_l_finger_l__geometry5_convex" file="yubi_left/guard_collision/dyn_l_finger_l__geometry5_convex.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry0_proxy_h000" file="yubi_left/guard_collision/dyn_r_finger_l__geometry0_proxy_h000.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry0_proxy_h001" file="yubi_left/guard_collision/dyn_r_finger_l__geometry0_proxy_h001.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry0_proxy_h002" file="yubi_left/guard_collision/dyn_r_finger_l__geometry0_proxy_h002.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry0_proxy_h003" file="yubi_left/guard_collision/dyn_r_finger_l__geometry0_proxy_h003.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry1_convex" file="yubi_left/guard_collision/dyn_r_finger_l__geometry1_convex.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry2_proxy_h000" file="yubi_left/guard_collision/dyn_r_finger_l__geometry2_proxy_h000.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry2_proxy_h001" file="yubi_left/guard_collision/dyn_r_finger_l__geometry2_proxy_h001.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry2_proxy_h002" file="yubi_left/guard_collision/dyn_r_finger_l__geometry2_proxy_h002.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry2_proxy_h003" file="yubi_left/guard_collision/dyn_r_finger_l__geometry2_proxy_h003.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry2_proxy_h004" file="yubi_left/guard_collision/dyn_r_finger_l__geometry2_proxy_h004.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry2_proxy_h005" file="yubi_left/guard_collision/dyn_r_finger_l__geometry2_proxy_h005.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry2_proxy_h006" file="yubi_left/guard_collision/dyn_r_finger_l__geometry2_proxy_h006.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry2_proxy_h007" file="yubi_left/guard_collision/dyn_r_finger_l__geometry2_proxy_h007.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry3_convex" file="yubi_left/guard_collision/dyn_r_finger_l__geometry3_convex.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry4_convex" file="yubi_left/guard_collision/dyn_r_finger_l__geometry4_convex.obj" />
+    <mesh name="v2_guard_dyn_r_finger_l__geometry5_convex" file="yubi_left/guard_collision/dyn_r_finger_l__geometry5_convex.obj" />
+    <mesh name="v2_guard_geometry0_convex" file="yubi_left/guard_collision/geometry0_convex.obj" />
+    <mesh name="v2_guard_geometry1_proxy_h000" file="yubi_left/guard_collision/geometry1_proxy_h000.obj" />
+    <mesh name="v2_guard_geometry1_proxy_h001" file="yubi_left/guard_collision/geometry1_proxy_h001.obj" />
+    <mesh name="v2_guard_geometry1_proxy_h002" file="yubi_left/guard_collision/geometry1_proxy_h002.obj" />
+    <mesh name="v2_guard_geometry1_proxy_h003" file="yubi_left/guard_collision/geometry1_proxy_h003.obj" />
+    <mesh name="v2_guard_geometry2_convex" file="yubi_left/guard_collision/geometry2_convex.obj" />
+    <mesh name="v2_guard_geometry3_convex" file="yubi_left/guard_collision/geometry3_convex.obj" />
+    <mesh name="v2_guard_geometry4_convex" file="yubi_left/guard_collision/geometry4_convex.obj" />
+    <mesh name="v2_guard_geometry5_convex" file="yubi_left/guard_collision/geometry5_convex.obj" />
+    <mesh name="v2_guard_geometry6_convex" file="yubi_left/guard_collision/geometry6_convex.obj" />
+    <mesh name="v2_guard_geometry7_proxy_h000" file="yubi_left/guard_collision/geometry7_proxy_h000.obj" />
+    <mesh name="v2_guard_geometry7_proxy_h001" file="yubi_left/guard_collision/geometry7_proxy_h001.obj" />
+    <mesh name="v2_guard_geometry7_proxy_h002" file="yubi_left/guard_collision/geometry7_proxy_h002.obj" />
+    <mesh name="v2_guard_geometry7_proxy_h003" file="yubi_left/guard_collision/geometry7_proxy_h003.obj" />
+    <mesh name="v2_guard_geometry7_proxy_h004" file="yubi_left/guard_collision/geometry7_proxy_h004.obj" />
+    <mesh name="v2_guard_geometry7_proxy_h005" file="yubi_left/guard_collision/geometry7_proxy_h005.obj" />
+    <mesh name="v2_guard_geometry7_proxy_h006" file="yubi_left/guard_collision/geometry7_proxy_h006.obj" />
+    <mesh name="v2_guard_geometry7_proxy_h007" file="yubi_left/guard_collision/geometry7_proxy_h007.obj" />
+    <mesh name="v2_guard_geometry8_convex" file="yubi_left/guard_collision/geometry8_convex.obj" />
+    <mesh name="v2_guard_geometry9_convex" file="yubi_left/guard_collision/geometry9_convex.obj" />
+    <mesh name="v2_guard_geometry10_proxy_h000" file="yubi_left/guard_collision/geometry10_proxy_h000.obj" />
+    <mesh name="v2_guard_geometry10_proxy_h001" file="yubi_left/guard_collision/geometry10_proxy_h001.obj" />
+    <mesh name="v2_guard_geometry10_proxy_h002" file="yubi_left/guard_collision/geometry10_proxy_h002.obj" />
+    <mesh name="v2_guard_geometry10_proxy_h003" file="yubi_left/guard_collision/geometry10_proxy_h003.obj" />
+    <mesh name="v2_guard_geometry11_proxy_h000" file="yubi_left/guard_collision/geometry11_proxy_h000.obj" />
+    <mesh name="v2_guard_geometry11_proxy_h001" file="yubi_left/guard_collision/geometry11_proxy_h001.obj" />
+    <mesh name="v2_guard_geometry11_proxy_h002" file="yubi_left/guard_collision/geometry11_proxy_h002.obj" />
+    <mesh name="v2_guard_geometry11_proxy_h003" file="yubi_left/guard_collision/geometry11_proxy_h003.obj" />
+    <mesh name="v2_guard_geometry11_proxy_h004" file="yubi_left/guard_collision/geometry11_proxy_h004.obj" />
+    <mesh name="v2_guard_geometry11_proxy_h005" file="yubi_left/guard_collision/geometry11_proxy_h005.obj" />
+    <mesh name="v2_guard_geometry11_proxy_h006" file="yubi_left/guard_collision/geometry11_proxy_h006.obj" />
+    <mesh name="v2_guard_geometry11_proxy_h007" file="yubi_left/guard_collision/geometry11_proxy_h007.obj" />
+    <mesh name="v2_guard_geometry12_convex" file="yubi_left/guard_collision/geometry12_convex.obj" />
+    <mesh name="v2_guard_geometry13_convex" file="yubi_left/guard_collision/geometry13_convex.obj" />
+    <mesh name="v2_guard_geometry14_convex" file="yubi_left/guard_collision/geometry14_convex.obj" />
+    <mesh name="v2_guard_geometry15_convex" file="yubi_left/guard_collision/geometry15_convex.obj" />
+    <mesh name="v2_guard_geometry16_convex" file="yubi_left/guard_collision/geometry16_convex.obj" />
+    <mesh name="v2_guard_geometry17_convex" file="yubi_left/guard_collision/geometry17_convex.obj" />
+    <mesh name="v2_guard_geometry18_convex" file="yubi_left/guard_collision/geometry18_convex.obj" />
+    <mesh name="v2_guard_geometry19_convex" file="yubi_left/guard_collision/geometry19_convex.obj" />
+    <mesh name="v2_guard_geometry20_convex" file="yubi_left/guard_collision/geometry20_convex.obj" />
+    <mesh name="v2_guard_geometry21_convex" file="yubi_left/guard_collision/geometry21_convex.obj" />
+    <mesh name="v2_guard_geometry22_convex" file="yubi_left/guard_collision/geometry22_convex.obj" />
+    <mesh name="v2_guard_geometry23_convex" file="yubi_left/guard_collision/geometry23_convex.obj" />
+    <mesh name="v2_guard_geometry24_convex" file="yubi_left/guard_collision/geometry24_convex.obj" />
+    <mesh name="v2_guard_geometry25_convex" file="yubi_left/guard_collision/geometry25_convex.obj" />
+    <mesh name="v2_guard_geometry26_convex" file="yubi_left/guard_collision/geometry26_convex.obj" />
+    <mesh name="v2_guard_geometry27_convex" file="yubi_left/guard_collision/geometry27_convex.obj" />
+    <mesh name="v2_guard_geometry28_convex" file="yubi_left/guard_collision/geometry28_convex.obj" />
+    <mesh name="v2_guard_geometry29_convex" file="yubi_left/guard_collision/geometry29_convex.obj" />
+    <mesh name="v2_guard_geometry30_convex" file="yubi_left/guard_collision/geometry30_convex.obj" />
+    <mesh name="v2_guard_geometry31_convex" file="yubi_left/guard_collision/geometry31_convex.obj" />
+    <mesh name="v2_guard_geometry32_convex" file="yubi_left/guard_collision/geometry32_convex.obj" />
+    <mesh name="v2_guard_geometry33_convex" file="yubi_left/guard_collision/geometry33_convex.obj" />
+    <mesh name="v2_guard_geometry34_convex" file="yubi_left/guard_collision/geometry34_convex.obj" />
+    <mesh name="v2_guard_geometry35_convex" file="yubi_left/guard_collision/geometry35_convex.obj" />
+    <mesh name="v2_guard_geometry36_convex" file="yubi_left/guard_collision/geometry36_convex.obj" />
+    <mesh name="v2_guard_geometry37_convex" file="yubi_left/guard_collision/geometry37_convex.obj" />
+    <mesh name="v2_guard_geometry38_convex" file="yubi_left/guard_collision/geometry38_convex.obj" />
+    <mesh name="v2_guard_geometry39_convex" file="yubi_left/guard_collision/geometry39_convex.obj" />
+    <mesh name="v2_guard_geometry40_convex" file="yubi_left/guard_collision/geometry40_convex.obj" />
+    <mesh name="v2_guard_geometry41_convex" file="yubi_left/guard_collision/geometry41_convex.obj" />
+    <mesh name="v2_guard_geometry42_proxy_h000" file="yubi_left/guard_collision/geometry42_proxy_h000.obj" />
+    <mesh name="v2_guard_geometry42_proxy_h001" file="yubi_left/guard_collision/geometry42_proxy_h001.obj" />
+    <mesh name="v2_guard_geometry42_proxy_h002" file="yubi_left/guard_collision/geometry42_proxy_h002.obj" />
+    <mesh name="v2_guard_geometry42_proxy_h003" file="yubi_left/guard_collision/geometry42_proxy_h003.obj" />
+    <mesh name="v2_guard_geometry43_proxy_h000" file="yubi_left/guard_collision/geometry43_proxy_h000.obj" />
+    <mesh name="v2_guard_geometry43_proxy_h001" file="yubi_left/guard_collision/geometry43_proxy_h001.obj" />
+    <mesh name="v2_guard_geometry43_proxy_h002" file="yubi_left/guard_collision/geometry43_proxy_h002.obj" />
+    <mesh name="v2_guard_geometry43_proxy_h003" file="yubi_left/guard_collision/geometry43_proxy_h003.obj" />
+  </asset>
+  <worldbody>
+    <!-- Blender / URDF chain: physical YUBI root coincides with FR3 link8. -->
+    <body name="right_gripper" pos="0 0 0" quat="1 0 0 0">
+      <site name="ft_frame" pos="0 0 0" size="0.01" rgba="1 0 0 0" type="sphere" group="1" />
+      <inertial pos="0 0 0.05" mass="0.3" diaginertia="0.001 0.001 0.0008" />
+      <body name="hand_root" pos="0 0.0015 0.051" quat="0.5 0.5 0.5 0.5" />
+      <geom name="yubi_mount_flange_visual" type="mesh" mesh="yubi_mount_flange" group="1" contype="0" conaffinity="0" rgba="0.65 0.68 0.72 1" />
+      <geom name="yubi_mount_attachment_visual" type="mesh" mesh="yubi_mount_attachment" group="1" contype="0" conaffinity="0" rgba="0.12 0.14 0.16 1" />
+      <geom name="yubi_mount_flange_collision_h000" type="mesh" mesh="yubi_mount_flange_collision_h000" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h001" type="mesh" mesh="yubi_mount_flange_collision_h001" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h002" type="mesh" mesh="yubi_mount_flange_collision_h002" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h003" type="mesh" mesh="yubi_mount_flange_collision_h003" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h004" type="mesh" mesh="yubi_mount_flange_collision_h004" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h005" type="mesh" mesh="yubi_mount_flange_collision_h005" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h006" type="mesh" mesh="yubi_mount_flange_collision_h006" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h007" type="mesh" mesh="yubi_mount_flange_collision_h007" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h008" type="mesh" mesh="yubi_mount_flange_collision_h008" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h009" type="mesh" mesh="yubi_mount_flange_collision_h009" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h010" type="mesh" mesh="yubi_mount_flange_collision_h010" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h011" type="mesh" mesh="yubi_mount_flange_collision_h011" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h012" type="mesh" mesh="yubi_mount_flange_collision_h012" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h013" type="mesh" mesh="yubi_mount_flange_collision_h013" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h014" type="mesh" mesh="yubi_mount_flange_collision_h014" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_flange_collision_h015" type="mesh" mesh="yubi_mount_flange_collision_h015" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h000" type="mesh" mesh="yubi_mount_attachment_collision_h000" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h001" type="mesh" mesh="yubi_mount_attachment_collision_h001" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h002" type="mesh" mesh="yubi_mount_attachment_collision_h002" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h003" type="mesh" mesh="yubi_mount_attachment_collision_h003" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h004" type="mesh" mesh="yubi_mount_attachment_collision_h004" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h005" type="mesh" mesh="yubi_mount_attachment_collision_h005" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h006" type="mesh" mesh="yubi_mount_attachment_collision_h006" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h007" type="mesh" mesh="yubi_mount_attachment_collision_h007" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h008" type="mesh" mesh="yubi_mount_attachment_collision_h008" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h009" type="mesh" mesh="yubi_mount_attachment_collision_h009" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h010" type="mesh" mesh="yubi_mount_attachment_collision_h010" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h011" type="mesh" mesh="yubi_mount_attachment_collision_h011" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h012" type="mesh" mesh="yubi_mount_attachment_collision_h012" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h013" type="mesh" mesh="yubi_mount_attachment_collision_h013" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h014" type="mesh" mesh="yubi_mount_attachment_collision_h014" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <geom name="yubi_mount_attachment_collision_h015" type="mesh" mesh="yubi_mount_attachment_collision_h015" group="0" contype="1" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+      <body name="yubi_geom" pos="0 -0.012 0.0345" quat="0 0 0 1">
+        <geom name="geometry0_visual" type="mesh" mesh="v2_vis_geometry0" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry1_visual" type="mesh" mesh="v2_vis_geometry1" group="1" contype="0" conaffinity="0" rgba="0.769 0.702 0.82 1" />
+        <geom name="geometry2_visual" type="mesh" mesh="v2_vis_geometry2" group="1" contype="0" conaffinity="0" rgba="1 1 1 1" />
+        <geom name="geometry3_visual" type="mesh" mesh="v2_vis_geometry3" group="1" contype="0" conaffinity="0" rgba="0.824 0.824 1 1" />
+        <geom name="geometry4_visual" type="mesh" mesh="v2_vis_geometry4" group="1" contype="0" conaffinity="0" rgba="0.769 0.702 0.82 1" />
+        <geom name="geometry5_visual" type="mesh" mesh="v2_vis_geometry5" group="1" contype="0" conaffinity="0" rgba="1 1 1 1" />
+        <geom name="geometry6_visual" type="mesh" mesh="v2_vis_geometry6" group="1" contype="0" conaffinity="0" rgba="0.824 0.824 1 1" />
+        <geom name="geometry7_visual" type="mesh" mesh="v2_vis_geometry7" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry8_visual" type="mesh" mesh="v2_vis_geometry8" group="1" contype="0" conaffinity="0" rgba="0.824 0.824 1 1" />
+        <geom name="geometry9_visual" type="mesh" mesh="v2_vis_geometry9" group="1" contype="0" conaffinity="0" rgba="1 1 1 1" />
+        <geom name="geometry10_visual" type="mesh" mesh="v2_vis_geometry10" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry11_visual" type="mesh" mesh="v2_vis_geometry11" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry12_visual" type="mesh" mesh="v2_vis_geometry12" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry13_visual" type="mesh" mesh="v2_vis_geometry13" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry14_visual" type="mesh" mesh="v2_vis_geometry14" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry15_visual" type="mesh" mesh="v2_vis_geometry15" group="1" contype="0" conaffinity="0" rgba="0.769 0.702 0.82 1" />
+        <geom name="geometry16_visual" type="mesh" mesh="v2_vis_geometry16" group="1" contype="0" conaffinity="0" rgba="0.769 0.702 0.82 1" />
+        <geom name="geometry17_visual" type="mesh" mesh="v2_vis_geometry17" group="1" contype="0" conaffinity="0" rgba="0.769 0.702 0.82 1" />
+        <geom name="geometry18_visual" type="mesh" mesh="v2_vis_geometry18" group="1" contype="0" conaffinity="0" rgba="0.769 0.702 0.82 1" />
+        <geom name="geometry19_visual" type="mesh" mesh="v2_vis_geometry19" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry20_visual" type="mesh" mesh="v2_vis_geometry20" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry21_visual" type="mesh" mesh="v2_vis_geometry21" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry22_visual" type="mesh" mesh="v2_vis_geometry22" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry23_visual" type="mesh" mesh="v2_vis_geometry23" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry24_visual" type="mesh" mesh="v2_vis_geometry24" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry25_visual" type="mesh" mesh="v2_vis_geometry25" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry26_visual" type="mesh" mesh="v2_vis_geometry26" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry27_visual" type="mesh" mesh="v2_vis_geometry27" group="1" contype="0" conaffinity="0" rgba="0.98 0.745 0.278 1" />
+        <geom name="geometry28_visual" type="mesh" mesh="v2_vis_geometry28" group="1" contype="0" conaffinity="0" rgba="0.98 0.745 0.278 1" />
+        <geom name="geometry29_visual" type="mesh" mesh="v2_vis_geometry29" group="1" contype="0" conaffinity="0" rgba="0.98 0.745 0.278 1" />
+        <geom name="geometry30_visual" type="mesh" mesh="v2_vis_geometry30" group="1" contype="0" conaffinity="0" rgba="0.98 0.745 0.278 1" />
+        <geom name="geometry31_visual" type="mesh" mesh="v2_vis_geometry31" group="1" contype="0" conaffinity="0" rgba="0.98 0.745 0.278 1" />
+        <geom name="geometry32_visual" type="mesh" mesh="v2_vis_geometry32" group="1" contype="0" conaffinity="0" rgba="0.98 0.745 0.278 1" />
+        <geom name="geometry33_visual" type="mesh" mesh="v2_vis_geometry33" group="1" contype="0" conaffinity="0" rgba="0.98 0.745 0.278 1" />
+        <geom name="geometry34_visual" type="mesh" mesh="v2_vis_geometry34" group="1" contype="0" conaffinity="0" rgba="0.98 0.745 0.278 1" />
+        <geom name="geometry35_visual" type="mesh" mesh="v2_vis_geometry35" group="1" contype="0" conaffinity="0" rgba="0.98 0.745 0.278 1" />
+        <geom name="geometry36_visual" type="mesh" mesh="v2_vis_geometry36" group="1" contype="0" conaffinity="0" rgba="1 1 0 1" />
+        <geom name="geometry37_visual" type="mesh" mesh="v2_vis_geometry37" group="1" contype="0" conaffinity="0" rgba="1 1 0 1" />
+        <geom name="geometry38_visual" type="mesh" mesh="v2_vis_geometry38" group="1" contype="0" conaffinity="0" rgba="1 1 0 1" />
+        <geom name="geometry39_visual" type="mesh" mesh="v2_vis_geometry39" group="1" contype="0" conaffinity="0" rgba="1 1 0 1" />
+        <geom name="geometry40_visual" type="mesh" mesh="v2_vis_geometry40" group="1" contype="0" conaffinity="0" rgba="0.769 0.702 0.82 1" />
+        <geom name="geometry41_visual" type="mesh" mesh="v2_vis_geometry41" group="1" contype="0" conaffinity="0" rgba="0.769 0.702 0.82 1" />
+        <geom name="geometry42_visual" type="mesh" mesh="v2_vis_geometry42" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="geometry43_visual" type="mesh" mesh="v2_vis_geometry43" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="guard_body_geometry0" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry0_convex" />
+        <geom name="guard_body_geometry1_h000" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry1_proxy_h000" />
+        <geom name="guard_body_geometry1_h001" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry1_proxy_h001" />
+        <geom name="guard_body_geometry1_h002" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry1_proxy_h002" />
+        <geom name="guard_body_geometry1_h003" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry1_proxy_h003" />
+        <geom name="guard_body_geometry2" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry2_convex" />
+        <geom name="guard_body_geometry3" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry3_convex" />
+        <geom name="guard_body_geometry4" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry4_convex" />
+        <geom name="guard_body_geometry5" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry5_convex" />
+        <geom name="guard_body_geometry6" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry6_convex" />
+        <geom name="guard_body_geometry7_h000" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry7_proxy_h000" />
+        <geom name="guard_body_geometry7_h001" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry7_proxy_h001" />
+        <geom name="guard_body_geometry7_h002" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry7_proxy_h002" />
+        <geom name="guard_body_geometry7_h003" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry7_proxy_h003" />
+        <geom name="guard_body_geometry7_h004" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry7_proxy_h004" />
+        <geom name="guard_body_geometry7_h005" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry7_proxy_h005" />
+        <geom name="guard_body_geometry7_h006" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry7_proxy_h006" />
+        <geom name="guard_body_geometry7_h007" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry7_proxy_h007" />
+        <geom name="guard_body_geometry8" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry8_convex" />
+        <geom name="guard_body_geometry9" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry9_convex" />
+        <geom name="guard_body_geometry10_h000" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry10_proxy_h000" />
+        <geom name="guard_body_geometry10_h001" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry10_proxy_h001" />
+        <geom name="guard_body_geometry10_h002" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry10_proxy_h002" />
+        <geom name="guard_body_geometry10_h003" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry10_proxy_h003" />
+        <geom name="guard_body_geometry11_h000" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry11_proxy_h000" />
+        <geom name="guard_body_geometry11_h001" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry11_proxy_h001" />
+        <geom name="guard_body_geometry11_h002" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry11_proxy_h002" />
+        <geom name="guard_body_geometry11_h003" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry11_proxy_h003" />
+        <geom name="guard_body_geometry11_h004" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry11_proxy_h004" />
+        <geom name="guard_body_geometry11_h005" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry11_proxy_h005" />
+        <geom name="guard_body_geometry11_h006" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry11_proxy_h006" />
+        <geom name="guard_body_geometry11_h007" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry11_proxy_h007" />
+        <geom name="guard_body_geometry12" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry12_convex" />
+        <geom name="guard_body_geometry13" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry13_convex" />
+        <geom name="guard_body_geometry14" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry14_convex" />
+        <geom name="guard_body_geometry15" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry15_convex" />
+        <geom name="guard_body_geometry16" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry16_convex" />
+        <geom name="guard_body_geometry17" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry17_convex" />
+        <geom name="guard_body_geometry18" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry18_convex" />
+        <geom name="guard_body_geometry19" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry19_convex" />
+        <geom name="guard_body_geometry20" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry20_convex" />
+        <geom name="guard_body_geometry21" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry21_convex" />
+        <geom name="guard_body_geometry22" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry22_convex" />
+        <geom name="guard_body_geometry23" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry23_convex" />
+        <geom name="guard_body_geometry24" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry24_convex" />
+        <geom name="guard_body_geometry25" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry25_convex" />
+        <geom name="guard_body_geometry26" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry26_convex" />
+        <geom name="guard_body_geometry27" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry27_convex" />
+        <geom name="guard_body_geometry28" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry28_convex" />
+        <geom name="guard_body_geometry29" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry29_convex" />
+        <geom name="guard_body_geometry30" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry30_convex" />
+        <geom name="guard_body_geometry31" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry31_convex" />
+        <geom name="guard_body_geometry32" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry32_convex" />
+        <geom name="guard_body_geometry33" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry33_convex" />
+        <geom name="guard_body_geometry34" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry34_convex" />
+        <geom name="guard_body_geometry35" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry35_convex" />
+        <geom name="guard_body_geometry36" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry36_convex" />
+        <geom name="guard_body_geometry37" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry37_convex" />
+        <geom name="guard_body_geometry38" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry38_convex" />
+        <geom name="guard_body_geometry39" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry39_convex" />
+        <geom name="guard_body_geometry40" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry40_convex" />
+        <geom name="guard_body_geometry41" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry41_convex" />
+        <geom name="guard_body_geometry42_h000" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry42_proxy_h000" />
+        <geom name="guard_body_geometry42_h001" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry42_proxy_h001" />
+        <geom name="guard_body_geometry42_h002" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry42_proxy_h002" />
+        <geom name="guard_body_geometry42_h003" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry42_proxy_h003" />
+        <geom name="guard_body_geometry43_h000" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry43_proxy_h000" />
+        <geom name="guard_body_geometry43_h001" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry43_proxy_h001" />
+        <geom name="guard_body_geometry43_h002" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry43_proxy_h002" />
+        <geom name="guard_body_geometry43_h003" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" type="mesh" mesh="v2_guard_geometry43_proxy_h003" />
+      </body>
+      <body name="eef" pos="0 0 0.1034" quat="1 0 0 0">
+        <!-- Body-fixed wrist camera with the same orientation and fovy as
+             yubi_right.xml. Its position is set separately for the left
+             gripper and differs from the right one by 0.45 mm in y and
+             0.02 mm in z. -->
+        <camera name="wrist" pos="0 0.04125 -0.05542" quat="0 0 0.996191 0.0871992" fovy="110" />
+        <camera name="wrist_fisheye_front" pos="0 0.04125 -0.05542" quat="-0.000000 0.000000 0.996191 0.087199" fovy="90" />
+        <site name="grip_site" pos="0 0 0" size="0.01" rgba="1 0 0 0" type="sphere" group="1" />
+        <site name="grip_site_cylinder" pos="0 0 0" size="0.005 10" rgba="0 1 0 0" type="cylinder" group="1" />
+        <site name="ee_x" pos="0.1 0 0" size="0.005 .1" quat="0.707105 0 0.707108 0" rgba="1 0 0 0" type="cylinder" group="1" />
+        <site name="ee_y" pos="0 0.1 0" size="0.005 .1" quat="0.707105 0.707108 0 0" rgba="0 1 0 0" type="cylinder" group="1" />
+        <site name="ee_z" pos="0 0 0.1" size="0.005 .1" quat="1 0 0 0" rgba="0 0 1 0" type="cylinder" group="1" />
+      </body>
+      <body name="finger_left" pos="0.015 0.001 0.0345" quat="0 0 0 1">
+        <!--Servo output shaft pivot; child geom offsets preserve root-frame mesh placement.-->
+        <inertial pos="0 0 0.01" mass="0.03" diaginertia="1e-05 1e-05 1e-05" />
+        <joint name="finger_joint_left" pos="0 0 0" axis="0 -1 0" range="0 0.7854" damping="0.05" armature="0.005" frictionloss="0.0" />
+        <geom name="finger_left_dyn_l_finger_r__geometry0_visual" pos="0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_l_finger_r__geometry0" group="1" contype="0" conaffinity="0" rgba="0.769 0.702 0.82 1" />
+        <geom name="finger_left_dyn_l_finger_r__geometry1_visual" pos="0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_l_finger_r__geometry1" group="1" contype="0" conaffinity="0" rgba="0.769 0.702 0.82 1" />
+        <geom name="finger_left_dyn_l_finger_r__geometry2_visual" pos="0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_l_finger_r__geometry2" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="finger_left_dyn_l_finger_r__geometry3_visual" pos="0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_l_finger_r__geometry3" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="finger_left_dyn_l_finger_r__geometry4_visual" pos="0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_l_finger_r__geometry4" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="finger_left_dyn_l_finger_r__geometry5_visual" pos="0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_l_finger_r__geometry5" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="finger_left_dyn_l_finger_r__geometry6_visual" pos="0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_l_finger_r__geometry6" group="1" contype="0" conaffinity="0" rgba="0.502 0 0 1" />
+        <geom name="finger_left_dyn_l_finger_r__geometry7_visual" pos="0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_l_finger_r__geometry7" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="finger_left_collision_h000" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h000" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h001" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h001" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h002" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h002" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h003" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h003" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h004" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h004" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h005" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h005" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h006" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h006" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h007" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h007" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h008" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h008" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h009" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h009" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h010" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h010" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h011" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h011" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h012" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h012" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h013" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h013" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h014" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h014" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h015" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h015" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h016" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h016" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h017" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h017" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h018" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h018" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_collision_h019" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry6_h019" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_pad_collision_h000" condim="4" friction="4 0.1 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="1" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry7_h000" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_pad_collision_h001" condim="4" friction="4 0.1 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="1" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry7_h001" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_pad_collision_h002" condim="4" friction="4 0.1 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="1" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry7_h002" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_pad_collision_h003" condim="4" friction="4 0.1 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="1" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry7_h003" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_pad_collision_h004" condim="4" friction="4 0.1 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="1" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry7_h004" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_left_pad_collision_h005" condim="4" friction="4 0.1 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="1" pos="0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_l_finger_l__geometry7_h005" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry0_h000" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry0_proxy_h000" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry0_h001" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry0_proxy_h001" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry0_h002" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry0_proxy_h002" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry0_h003" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry0_proxy_h003" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry1" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry1_convex" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry2_h000" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry2_proxy_h000" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry2_h001" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry2_proxy_h001" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry2_h002" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry2_proxy_h002" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry2_h003" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry2_proxy_h003" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry2_h004" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry2_proxy_h004" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry2_h005" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry2_proxy_h005" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry2_h006" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry2_proxy_h006" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry2_h007" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry2_proxy_h007" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry3" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry3_convex" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry4" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry4_convex" />
+        <geom name="guard_finger_left_dyn_l_finger_l__geometry5" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_l_finger_l__geometry5_convex" />
+      </body>
+      <body name="finger_right" pos="-0.015 0.001 0.0345" quat="0 0 0 1">
+        <!--Servo output shaft pivot; child geom offsets preserve root-frame mesh placement.-->
+        <inertial pos="0 0 0.01" mass="0.03" diaginertia="1e-05 1e-05 1e-05" />
+        <joint name="finger_joint_right" pos="0 0 0" axis="0 1 0" range="0 0.7854" damping="0.05" armature="0.005" frictionloss="0.0" />
+        <geom name="finger_right_dyn_r_finger_r__geometry0_visual" pos="-0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_r_finger_r__geometry0" group="1" contype="0" conaffinity="0" rgba="0.769 0.702 0.82 1" />
+        <geom name="finger_right_dyn_r_finger_r__geometry1_visual" pos="-0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_r_finger_r__geometry1" group="1" contype="0" conaffinity="0" rgba="0.769 0.702 0.82 1" />
+        <geom name="finger_right_dyn_r_finger_r__geometry2_visual" pos="-0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_r_finger_r__geometry2" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="finger_right_dyn_r_finger_r__geometry3_visual" pos="-0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_r_finger_r__geometry3" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="finger_right_dyn_r_finger_r__geometry4_visual" pos="-0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_r_finger_r__geometry4" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="finger_right_dyn_r_finger_r__geometry5_visual" pos="-0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_r_finger_r__geometry5" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="finger_right_dyn_r_finger_r__geometry6_visual" pos="-0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_r_finger_r__geometry6" group="1" contype="0" conaffinity="0" rgba="0.502 0 0 1" />
+        <geom name="finger_right_dyn_r_finger_r__geometry7_visual" pos="-0.015 0.013 0" type="mesh" mesh="v2_vis_dyn_r_finger_r__geometry7" group="1" contype="0" conaffinity="0" rgba="0 0 0 1" />
+        <geom name="finger_right_collision_h000" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h000" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_collision_h001" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h001" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_collision_h002" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h002" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_collision_h003" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h003" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_collision_h004" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h004" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_collision_h005" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h005" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_collision_h006" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h006" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_collision_h007" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h007" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_collision_h008" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h008" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_collision_h009" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h009" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_collision_h010" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h010" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_collision_h011" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h011" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_collision_h012" condim="4" friction="0.5 0.05 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="0" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry6_h012" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_pad_collision_h000" condim="4" friction="4 0.1 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="1" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry7_h000" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_pad_collision_h001" condim="4" friction="4 0.1 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="1" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry7_h001" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_pad_collision_h002" condim="4" friction="4 0.1 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="1" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry7_h002" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_pad_collision_h003" condim="4" friction="4 0.1 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="1" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry7_h003" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_pad_collision_h004" condim="4" friction="4 0.1 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="1" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry7_h004" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="finger_right_pad_collision_h005" condim="4" friction="4 0.1 0.0001" solref="0.01 1" solimp="0.95 0.99 0.001" priority="1" pos="-0.015 0.013 0" type="mesh" mesh="v2_coll_dyn_r_finger_l__geometry7_h005" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry0_h000" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry0_proxy_h000" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry0_h001" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry0_proxy_h001" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry0_h002" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry0_proxy_h002" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry0_h003" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry0_proxy_h003" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry1" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry1_convex" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry2_h000" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry2_proxy_h000" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry2_h001" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry2_proxy_h001" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry2_h002" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry2_proxy_h002" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry2_h003" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry2_proxy_h003" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry2_h004" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry2_proxy_h004" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry2_h005" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry2_proxy_h005" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry2_h006" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry2_proxy_h006" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry2_h007" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry2_proxy_h007" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry3" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry3_convex" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry4" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry4_convex" />
+        <geom name="guard_finger_right_dyn_r_finger_l__geometry5" condim="3" friction="0.1 0.005 0.0001" solref="0.004 1" solimp="0.99 0.9999 0.0001" priority="1" margin="0.001" gap="0" mass="0" group="0" contype="2" conaffinity="1" rgba="0.5 0.5 0.5 0" pos="-0.015 0.013 0" type="mesh" mesh="v2_guard_dyn_r_finger_l__geometry5_convex" />
+      </body>
+    </body>
+  </worldbody>
+  <equality>
+    <joint joint1="finger_joint_left" joint2="finger_joint_right" polycoef="0 1 0 0 0" solref="0.001 1" solimp="0.99 0.999 0.001" />
+  </equality>
+  <actuator>
+    <position ctrllimited="true" ctrlrange="0.0 0.7854" joint="finger_joint_left" kp="1000" kv="30" name="finger_l" forcelimited="true" forcerange="-20 20" />
+    <position ctrllimited="true" ctrlrange="0.0 0.7854" joint="finger_joint_right" kp="1000" kv="30" name="finger_r" forcelimited="true" forcerange="-20 20" />
+  </actuator>
+  <sensor>
+    <force name="force_ee" site="ft_frame" />
+    <torque name="torque_ee" site="ft_frame" />
+  </sensor>
+</mujoco>

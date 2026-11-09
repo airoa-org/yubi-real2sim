@@ -1,0 +1,58 @@
+{
+  "reading_room_cup1trim": {
+    "checkpoint": "{inputs_root}/checkpoints/pi05_cup",
+    "config": "config/release/fr3/flat/reading_room_cup_cup1trim.yaml",
+    "files": {
+      "base_placement.json": {
+        "kind": "copy",
+        "sha256": "0bebaf0c4ed14418d479bd2de4e84c9aa09edb4f308aa5e78fcacb12fcd83bd0",
+        "source": "robosuite_env/obj_calib/fr3_base_franka_flat.json (not kept in the repository)"
+      },
+      "gripper_calib_rad.json": {
+        "kind": "copy",
+        "sha256": "12f726e13e21f0c79c4dd05bfb5b4fea65ebc7783189e3bc44bc652d0db18d2f",
+        "source": "robosuite_env/assets/gripper_calib_rad.json"
+      },
+      "cup_cup1trim.json": {
+        "kind": "copy",
+        "sha256": "455742b7b942817d23c0c8903d6837ad78bb3e902c84638fc1f0b52aa0eb207a",
+        "recorded_sha256": "bb75b36c25bdb0b53041abe1aa84e9d43c744f0b1b04ac09d46954f938256a6a",
+        "source": "config/flat_cup_trim_local1_20260915/layouts/r30_07_center.json (not kept in the repository)",
+        "path": "assets/initpose/fr3/flat/cup_cup1trim.json"
+      }
+    },
+    "initial_arm_joints": "fr3/flat/grip07",
+    "scenes": [
+      "{inputs_root}/scenes/flat_reading_room"
+    ],
+    "initial_arm_joints_json": "assets/initial_poses/fr3/flat/grip07.json"
+  },
+  "a_room_cup1trim": {
+    "checkpoint": "{inputs_root}/checkpoints/pi05_cup",
+    "config": "config/release/fr3/flat/a_room_cup_cup1trim.yaml",
+    "files": {
+      "base_placement.json": {
+        "kind": "copy",
+        "sha256": "0bebaf0c4ed14418d479bd2de4e84c9aa09edb4f308aa5e78fcacb12fcd83bd0",
+        "source": "robosuite_env/obj_calib/fr3_base_franka_flat.json (not kept in the repository)"
+      },
+      "gripper_calib_rad.json": {
+        "kind": "copy",
+        "sha256": "12f726e13e21f0c79c4dd05bfb5b4fea65ebc7783189e3bc44bc652d0db18d2f",
+        "source": "robosuite_env/assets/gripper_calib_rad.json"
+      },
+      "cup_cup1trim.json": {
+        "kind": "copy",
+        "sha256": "455742b7b942817d23c0c8903d6837ad78bb3e902c84638fc1f0b52aa0eb207a",
+        "recorded_sha256": "bb75b36c25bdb0b53041abe1aa84e9d43c744f0b1b04ac09d46954f938256a6a",
+        "source": "config/flat_cup_trim_local1_20260915/layouts/r30_07_center.json (not kept in the repository)",
+        "path": "assets/initpose/fr3/flat/cup_cup1trim.json"
+      }
+    },
+    "initial_arm_joints": "fr3/flat/grip07",
+    "scenes": [
+      "{inputs_root}/scenes/flat_a_room"
+    ],
+    "initial_arm_joints_json": "assets/initial_poses/fr3/flat/grip07.json"
+  }
+}

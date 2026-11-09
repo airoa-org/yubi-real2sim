@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "huggingface": {
+    "policies": {
+      "repo_id": "airoa-org/yubi-real2sim-policies",
+      "repo_type": "model",
+      "revision": "4cba46439cef31ce9cfa1e689f84eff4aa3e0184",
+      "folders": {
+        "{inputs_root}/checkpoints/": ""
+      }
+    },
+    "assets": {
+      "repo_id": "airoa-org/yubi-real2sim-assets",
+      "repo_type": "dataset",
+      "revision": "b77940093973c70064a37ae62d4037c74c80c435",
+      "folders": {
+        "{inputs_root}/scenes/": "scenes/",
+        "{repo_root}/robosuite_env/assets/": "assets/"
+      }
+    }
+  },
+  "runtime_bundles": {
+    "yubi_right": [],
+    "yubi_left": [],
+    "fr3": ["fr3_collision"],
+    "cup": ["trellis_cup_plate"],
+    "plate": ["trellis_cup_plate"]
+  },
+  "archives": {
+    "fr3_collision": {
+      "destination": "{repo_root}/robosuite_env/assets/fr3_collision",
+      "tree": {
+        "size": 132336,
+        "sha256": "6bcd645108fba5719fc053df1d4d2f802a8505a4acabce1b057fd8d8d0e94481"
+      }
+    },
+    "trellis_cup_plate": {
+      "destination": "{repo_root}/robosuite_env/assets/trellis_cup_plate",
+      "tree": {
+        "size": 474611522,
+        "sha256": "c4501b3a7901c35ac3b43bfd5970a397a48bfa9abef90c41e405564b33257517"
+      }
+    },
+    "pi05_cup": {
+      "destination": "{inputs_root}/checkpoints/pi05_cup",
+      "tree": {
+        "size": 12436001424,
+        "sha256": "c17abd586b888c24e76ac15f6b31c69c5071eca585c51ee001f6c19072d8b1fb"
+      }
+    },
+    "flat_reading_room": {
+      "destination": "{inputs_root}/scenes/flat_reading_room",
+      "tree": {
+        "size": 1350537264,
+        "sha256": "4ef0c8d0bfa05907147839343cceb0b8f5f963e5b489e059141ebeb67f6bea76"
+      }
+    },
+    "flat_a_room": {
+      "destination": "{inputs_root}/scenes/flat_a_room",
+      "tree": {
+        "size": 707472070,
+        "sha256": "f323529b9a607889c3f73fb82a47a2ebf2b35535eaa6f10984bf4cefba512c52"
+      }
+    }
+  }
+}

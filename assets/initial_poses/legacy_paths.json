@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "description": "Repository paths initial poses had before, and where each pose lives now: config/*_initial_arm_joints.json and assets/initial_poses/<robot>/<scene>/<name>.json. Profiles and worker command lines that spell an old path are redirected here.",
+  "paths": {
+    "config/fr3_duo_init_high_initial_arm_joints.json": "assets/initial_poses/fr3/duo/init_high.json",
+    "config/fr3_grip07_initial_arm_joints.json": "assets/initial_poses/fr3/flat/grip07.json",
+    "config/fr3_registered_cup_calibrated_initial_arm_joints.json": "assets/initial_poses/fr3/flat/registered_cup_calibrated.json",
+    "assets/initial_poses/fr3/franka_flat/grip07.json": "assets/initial_poses/fr3/flat/grip07.json"
+  }
+}

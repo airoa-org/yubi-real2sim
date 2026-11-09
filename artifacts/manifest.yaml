@@ -1,0 +1,254 @@
+schema_version: 1
+
+# Only variables declared here may be expanded by artifact local_path fields.
+# They locate content; credentials and signed URLs are forbidden in this file.
+# REAL2SIM_INPUTS_ROOT is the single machine-local input root from .env; every
+# production local_path below is written as "{inputs_root}/<layout>" where the
+# layout is checkpoints/<name> or scenes/<scene>
+# (docs/configuration.md#inputs-root). The template field resolves to the
+# normalized REAL2SIM_INPUTS_ROOT value.
+environment_allowlist:
+  - REAL2SIM_INPUTS_ROOT
+  - REAL2SIM_POLICY_EPISODE
+
+artifacts:
+  - id: fr3-collision-franka-description-2fd6aaa8
+    name: Franka FR3 collision meshes
+    version: 2fd6aaa8c5e3bbfe857b8fb19978694cdc41e6ea
+    uri: archive://fr3_collision.tar/fr3_collision
+    size: 114322
+    sha256: ee7ac2b1e725e4078e5e34c222a1d23e6d0e275bf8b2ddb67b7e54e1d795017b
+    license: Apache-2.0
+    access: public
+    created_at: "2026-08-02T00:00:00+09:00"
+    generator_commit: 2fd6aaa8c5e3bbfe857b8fb19978694cdc41e6ea
+    status: ready
+    kind: collection
+    local_path: "{repo_root}"
+    files:
+      - robosuite_env/assets/fr3_collision/link0.stl
+      - robosuite_env/assets/fr3_collision/link1.stl
+      - robosuite_env/assets/fr3_collision/link2.stl
+      - robosuite_env/assets/fr3_collision/link3.stl
+      - robosuite_env/assets/fr3_collision/link4.stl
+      - robosuite_env/assets/fr3_collision/link5.stl
+      - robosuite_env/assets/fr3_collision/link6.stl
+      - robosuite_env/assets/fr3_collision/link7.stl
+    description: "Installed from the Hugging Face folder assets/fr3_collision/ (artifacts/release_downloads.json). Upstream provenance is the pinned franka_description commit in version/generator_commit."
+
+  - id: public-cup-plate-visual-v1
+    name: Public cup/plate visual meshes and textures
+    version: cup-plate-assets-2026-08-19
+    uri: archive://trellis_cup_plate.tar/trellis_cup_plate
+    size: 473904497
+    sha256: a1de2f51d0d0417c18568baf1ca49e24e789964e932afaee2e3337936af477d2
+    license: Apache-2.0
+    access: public
+    created_at: "2026-08-19T17:15:00+09:00"
+    generator_commit: not-applicable
+    status: ready
+    kind: collection
+    local_path: "{repo_root}"
+    files:
+      - robosuite_env/assets/trellis_cup_plate/cup.png
+      - robosuite_env/assets/trellis_cup_plate/plate.png
+      - robosuite_env/assets/trellis_cup_plate/cup_vis.obj
+      - robosuite_env/assets/trellis_cup_plate/plate_vis.obj
+    description: "Installed from the Hugging Face folder assets/trellis_cup_plate/ (artifacts/release_downloads.json); these four public cup/plate visual files are the runtime-assets binding. The PaliGemma tokenizer is not part of this collection or folder; OpenPI fetches it at runtime from gs://big_vision."
+
+  - id: public-cup-plate-collision-v1
+    name: Public cup/plate collision meshes
+    version: cup-plate-assets-2026-08-19
+    uri: archive://trellis_cup_plate.tar/trellis_cup_plate/coll
+    size: 692167
+    sha256: 7980bacec4f9e10eadb840a2a86c52513babd3da39e349be6f1e81f63ca98118
+    license: Apache-2.0
+    access: public
+    created_at: "2026-08-19T17:15:00+09:00"
+    generator_commit: not-applicable
+    status: ready
+    kind: collection
+    local_path: "{repo_root}/robosuite_env/assets/trellis_cup_plate/coll"
+    files:
+      - cup_000.obj
+      - cup_001.obj
+      - cup_002.obj
+      - cup_003.obj
+      - cup_004.obj
+      - cup_005.obj
+      - cup_006.obj
+      - cup_007.obj
+      - cup_008.obj
+      - cup_009.obj
+      - cup_010.obj
+      - cup_011.obj
+      - cup_012.obj
+      - cup_013.obj
+      - cup_014.obj
+      - cup_015.obj
+      - cup_016.obj
+      - cup_017.obj
+      - cup_018.obj
+      - cup_019.obj
+      - cup_020.obj
+      - cup_021.obj
+      - cup_022.obj
+      - cup_023.obj
+      - cup_024.obj
+      - cup_025.obj
+      - cup_026.obj
+      - cup_027.obj
+      - cup_028.obj
+      - cup_029.obj
+      - cup_030.obj
+      - cup_031.obj
+      - cup_032.obj
+      - cup_033.obj
+      - cup_034.obj
+      - cup_035.obj
+      - cup_036.obj
+      - cup_037.obj
+      - plate_000.obj
+      - plate_001.obj
+      - plate_002.obj
+      - plate_003.obj
+      - plate_004.obj
+      - plate_005.obj
+      - plate_006.obj
+      - plate_007.obj
+      - plate_008.obj
+      - plate_009.obj
+      - plate_010.obj
+      - plate_011.obj
+      - plate_012.obj
+      - plate_013.obj
+      - plate_014.obj
+      - plate_015.obj
+      - plate_016.obj
+      - plate_017.obj
+      - plate_018.obj
+      - plate_019.obj
+    description: "Installed from the Hugging Face folder assets/trellis_cup_plate/ (artifacts/release_downloads.json) beside the visual files; the canonical digest is over this collection root."
+
+  - id: pi05-cup
+    name: pi05_cup checkpoint (cup on plate) step 4000
+    version: pi05_cup-4000
+    uri: generated://policy-training/pi05-cup
+    size: 12436001424
+    sha256: c17abd586b888c24e76ac15f6b31c69c5071eca585c51ee001f6c19072d8b1fb
+    license: LicenseRef-Gemma-Terms-of-Use
+    access: public
+    created_at: "2026-08-20T17:13:50+09:00"
+    generator_commit: not-applicable
+    status: ready
+    kind: tree
+    local_path: "{inputs_root}/checkpoints/pi05_cup"
+    description: "pi05_cup checkpoint (cup on plate), used by the cup1trim profiles. 39 files: params/ (OCDBT), assets/pi05_cup/norm_stats.json, _CHECKPOINT_METADATA, README.txt, NOTICE and the three licence texts; experiment_config/ is empty; no train_state/. It is a Gemma Model Derivative (fine-tuned from openpi pi0.5, which builds on PaliGemma), published by the release download catalog (artifacts/release_downloads.json)."
+
+  # Redistributable, non-functional fixtures exercise every external-input role
+  # in clean CI. They are intentionally too small to run a real policy.
+  - id: tiny-checkpoint-v1
+    name: Tiny checkpoint placeholder
+    version: "1"
+    uri: fixture://tests/fixtures/artifacts/checkpoint
+    size: 69
+    sha256: 113a6e7fe05dc99ca30bac0e892c2ebb5aa5c13a7896026f899fd9acf467730a
+    license: CC0-1.0
+    access: fixture
+    created_at: "2026-08-02T00:00:00+09:00"
+    generator_commit: not-applicable
+    status: ready
+    kind: tree
+    local_path: "{repo_root}/tests/fixtures/artifacts/checkpoint"
+
+  - id: tiny-scene-v2
+    name: Tiny 3DGS scene placeholder
+    version: "1"
+    uri: fixture://tests/fixtures/artifacts/scene
+    size: 832
+    sha256: 4a9f87419c18d303d9445a3b6df0cedf331ba33cc813676e0420949b671e7af3
+    license: CC0-1.0
+    access: fixture
+    created_at: "2026-08-02T00:00:00+09:00"
+    generator_commit: not-applicable
+    status: ready
+    kind: tree
+    local_path: "{repo_root}/tests/fixtures/artifacts/scene"
+
+  - id: tiny-registered-desk-v1
+    name: Tiny registered desk placeholder
+    version: "1"
+    uri: fixture://tests/fixtures/artifacts/registered-desk
+    size: 113
+    sha256: a0f0a294c3afe7c3d9926435c26117761b0942bccd07f9f9866a023d8dffdc6e
+    license: CC0-1.0
+    access: fixture
+    created_at: "2026-08-02T00:00:00+09:00"
+    generator_commit: not-applicable
+    status: ready
+    kind: tree
+    local_path: "{repo_root}/tests/fixtures/artifacts/registered-desk"
+
+  - id: tiny-policy-episode-v1
+    name: Tiny policy episode placeholder
+    version: "1"
+    uri: fixture://tests/fixtures/artifacts/policy-episode.parquet
+    size: 70
+    sha256: f3008c30955ea9c07cfc08dd01c38dd64de89c24c9834a90ae568415bba7e5a6
+    license: CC0-1.0
+    access: fixture
+    created_at: "2026-08-02T00:00:00+09:00"
+    generator_commit: not-applicable
+    status: ready
+    kind: file
+    local_path: "{repo_root}/tests/fixtures/artifacts/policy-episode.parquet"
+
+  - id: tiny-repository-assets-v1
+    name: Tiny repository asset placeholders
+    version: "1"
+    uri: fixture://tests/fixtures/artifacts
+    size: 69
+    sha256: e691ee43878d2e890d25ab57bd7b6ce6d7d30d56efdae4da14c848081ed094ec
+    license: CC0-1.0
+    access: fixture
+    created_at: "2026-08-02T00:00:00+09:00"
+    generator_commit: not-applicable
+    status: ready
+    kind: collection
+    local_path: "{repo_root}"
+    files:
+      - tests/fixtures/artifacts/checkpoint/README.txt
+
+  # Public SuperSplat rooms (CC BY 4.0), registered to the FR3 Flat rig;
+  # attribution in assets/public_scenes/README.md; the registration is only in each archive.
+  # AIRoA's background.json and table_collision/ in each archive are Apache-2.0
+  # (THIRD_PARTY_NOTICES C.4), hence "CC-BY-4.0 AND Apache-2.0".
+  - id: public-scene-flat-reading-room-v2
+    name: flat_reading_room — "Reading Room (No Lidar, Only Photos)" by Ethan (CC BY 4.0), registered to the FR3 Flat rig
+    version: public-scenes-2026-11-04
+    uri: archive://flat_reading_room.tar.gz/flat_reading_room
+    size: 1350537264
+    sha256: 4ef0c8d0bfa05907147839343cceb0b8f5f963e5b489e059141ebeb67f6bea76
+    license: CC-BY-4.0 AND Apache-2.0
+    access: public
+    created_at: "2026-11-04T15:23:00+09:00"
+    generator_commit: not-applicable
+    status: ready
+    kind: tree
+    local_path: "{inputs_root}/scenes/flat_reading_room"
+    description: "https://superspl.at/scene/9d370db9 converted to PLY and registered to the FR3 Flat world. The registration (mat_w2gs), the table-plane height (calibration_table_z_m) and the scene id are only in the archive's background.json; see assets/public_scenes/README.md."
+
+  - id: public-scene-flat-a-room-v2
+    name: flat_a_room — "A Room" by parsa mahdavi (CC BY 4.0), registered to the FR3 Flat rig
+    version: public-scenes-2026-11-04
+    uri: archive://flat_a_room.tar.gz/flat_a_room
+    size: 707472070
+    sha256: f323529b9a607889c3f73fb82a47a2ebf2b35535eaa6f10984bf4cefba512c52
+    license: CC-BY-4.0 AND Apache-2.0
+    access: public
+    created_at: "2026-11-04T15:23:00+09:00"
+    generator_commit: not-applicable
+    status: ready
+    kind: tree
+    local_path: "{inputs_root}/scenes/flat_a_room"
+    description: "https://superspl.at/scene/3e754ea2 converted to PLY and registered to the FR3 Flat world. The registration (mat_w2gs), the table-plane height (calibration_table_z_m) and the scene id are only in the archive's background.json; see assets/public_scenes/README.md."

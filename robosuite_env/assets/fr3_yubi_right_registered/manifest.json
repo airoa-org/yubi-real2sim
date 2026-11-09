@@ -1,0 +1,675 @@
+{
+  "schema_version": 1,
+  "side": "right",
+  "source_blend": "external:fr3_yubi_with_mount_initpose_urdf_colored_registered.blend",
+  "source_blend_sha256": "a0da8eb19748a0235f7344cde871d8c26d0be5cb3fecaff9741aa4598c6a84d1",
+  "coordinate_frame": "YUBI_physical_root, metres",
+  "fr3_topology_validation": {
+    "visual_objects": 28,
+    "visual_triangles": 232298,
+    "collision_objects": 8,
+    "collision_triangles": 2273
+  },
+  "chain": {
+    "link7_to_link8": {
+      "translation_m": [
+        0.0,
+        0.0,
+        0.107
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "link8_to_yubi_physical_root": {
+      "matrix": [
+        [
+          -0.7071066802984417,
+          0.7071068466732365,
+          3.090862126529413e-08,
+          0.0
+        ],
+        [
+          -0.7071068466732354,
+          -0.7071066802984385,
+          -7.46200052032544e-08,
+          -2.7755575615628914e-17
+        ],
+        [
+          -3.0908621935144654e-08,
+          -7.462000294940924e-08,
+          0.9999999999999967,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "translation_m": [
+        0.0,
+        -2.7755575615628914e-17,
+        0.0
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        -2.356194490192345
+      ]
+    },
+    "yubi_physical_root_to_hand_root": {
+      "matrix": [
+        [
+          5.960463436984485e-08,
+          0.9999999999999887,
+          1.509958025280858e-07,
+          -9.408815566944284e-10
+        ],
+        [
+          -8.742278107350048e-08,
+          -1.509957928172565e-07,
+          0.9999999999999848,
+          0.0015000082611367205
+        ],
+        [
+          0.9999999999999961,
+          -5.960464782291266e-08,
+          8.74227730207615e-08,
+          0.050999999111893124
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "translation_m": [
+        -9.408815566944284e-10,
+        0.0015000082611367205,
+        0.050999999111893124
+      ],
+      "rpy_rad": [
+        -1.5707963267948966,
+        -1.5707963267948966,
+        0.0
+      ]
+    },
+    "colored_yubi_registration_translation_m": [
+      -2.13950687926939e-08,
+      -0.0119999639928084,
+      -0.016500056314482626
+    ],
+    "colored_yubi_model_origin_in_physical_root_m": [
+      -2.13950687926939e-08,
+      -0.0119999639928084,
+      0.03449994368551737
+    ]
+  },
+  "visual_meshes": {
+    "right_yubi_flange": {
+      "source_object": "URDF_YUBI_flange_visual",
+      "path": "robosuite_env/assets/fr3_yubi_right_registered/visual/right_yubi_flange.obj",
+      "vertices": 1981,
+      "triangles": 3884,
+      "bounds_min_m": [
+        -0.03146987866542664,
+        -0.03145977899528468,
+        -0.0024999982371933793
+      ],
+      "bounds_max_m": [
+        0.03146987695314524,
+        0.031500011616942436,
+        0.007499994224351769
+      ],
+      "sha256": "5b601a793ba7831800c45e782572435170c197de4168a6fc30b9438f8c7d5775"
+    },
+    "right_yubi_attachment": {
+      "source_object": "YUBI_Attachment_for_franka_visual",
+      "path": "robosuite_env/assets/fr3_yubi_right_registered/visual/right_yubi_attachment.obj",
+      "vertices": 6412,
+      "triangles": 12884,
+      "bounds_min_m": [
+        -0.03375002071977742,
+        -0.033742338623981794,
+        6.54558272361605e-07
+      ],
+      "bounds_max_m": [
+        0.03374998196242896,
+        0.0337406096792181,
+        0.01450109629239471
+      ],
+      "sha256": "068db462cc66fb15514962c020946825a5431fdd4316bb9b90f7acae23e06ef1"
+    }
+  },
+  "collision_build": {
+    "method": "CoACD convex decomposition",
+    "coacd": "coacd",
+    "threshold": 0.03,
+    "max_hulls": 16,
+    "max_hull_vertices": 64,
+    "seed": 0,
+    "meshes": {
+      "right_yubi_flange": [
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h000.obj",
+          "vertices": 64,
+          "triangles": 124,
+          "bounds_min_m": [
+            -0.01573057845234871,
+            -0.01571142114698887,
+            -0.0024999978486448526
+          ],
+          "bounds_max_m": [
+            0.01568438857793808,
+            0.01571141928434372,
+            0.002018265426158905
+          ],
+          "sha256": "9139db6d35aae9891f2dde2130436b2a9f9fdd5112642c0791b52c5bce827b1b"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h001.obj",
+          "vertices": 54,
+          "triangles": 104,
+          "bounds_min_m": [
+            -0.02528820000588894,
+            -0.02158942259848118,
+            -1.1430468793705018e-09
+          ],
+          "bounds_max_m": [
+            0.025811664760112762,
+            -0.01572810672223568,
+            0.007499671541154385
+          ],
+          "sha256": "2bd5fc2fcadc6c6d5edd704be49755af19857147bb9ba40a863aa83fb0df167a"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h002.obj",
+          "vertices": 51,
+          "triangles": 98,
+          "bounds_min_m": [
+            -0.022882772609591484,
+            -0.031458936631679535,
+            -1.6121338708430244e-09
+          ],
+          "bounds_max_m": [
+            0.0024029104970395565,
+            -0.021590959280729294,
+            0.004001315217465162
+          ],
+          "sha256": "9fc42895e9755e7d109d3002db18b22244aabba3e248334078979a1e7697025f"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h003.obj",
+          "vertices": 62,
+          "triangles": 120,
+          "bounds_min_m": [
+            -0.026824411004781723,
+            0.015736842527985573,
+            7.348544386331923e-07
+          ],
+          "bounds_max_m": [
+            4.3016057134082075e-06,
+            0.02500128000974655,
+            0.007499259896576405
+          ],
+          "sha256": "b4503b8fbe35256fd08644a73b8e1393b21b147718e5ad5a0ba925d6780360fe"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h004.obj",
+          "vertices": 64,
+          "triangles": 124,
+          "bounds_min_m": [
+            -0.03146611526608467,
+            0.0014040636597201228,
+            2.6421406729149055e-10
+          ],
+          "bounds_max_m": [
+            0.031205952167510986,
+            0.015734320506453514,
+            0.007499992847442627
+          ],
+          "sha256": "249eb475387a33fb2840456e28a3ccfb7820d6cab40f5844f8d7e25fc8efcebd"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h005.obj",
+          "vertices": 48,
+          "triangles": 92,
+          "bounds_min_m": [
+            -0.01909191720187664,
+            0.02500372752547264,
+            7.353235105256317e-07
+          ],
+          "bounds_max_m": [
+            0.0034264835994690657,
+            0.031500011682510376,
+            0.007499994244426489
+          ],
+          "sha256": "fcdc3ecc1489f21dcb071ffa336cfb428051f4d9c145804fb9f4549a85a8c138"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h006.obj",
+          "vertices": 57,
+          "triangles": 110,
+          "bounds_min_m": [
+            2.4083941752905957e-05,
+            -0.03145821765065193,
+            -1.1430468793705018e-09
+          ],
+          "bounds_max_m": [
+            0.022882767021656036,
+            -0.02158999629318714,
+            0.007499991450458765
+          ],
+          "sha256": "57513a147f1fe34010a8442b6e95d6509eb0b09e685267a8a9502a0296c911e1"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h007.obj",
+          "vertices": 43,
+          "triangles": 82,
+          "bounds_min_m": [
+            -0.031468965113162994,
+            -0.0069999974220991135,
+            -2.048729380588199e-10
+          ],
+          "bounds_max_m": [
+            -0.022138485684990883,
+            0.0014040627283975482,
+            0.00749999238178134
+          ],
+          "sha256": "f2e76b3cafaa33c65c9e19093cce24502412fa484d568e9c5c67fd847de4a30e"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h008.obj",
+          "vertices": 24,
+          "triangles": 44,
+          "bounds_min_m": [
+            -0.02213801071047783,
+            -0.010827837511897087,
+            7.339162948483136e-07
+          ],
+          "bounds_max_m": [
+            -0.0025027994997799397,
+            0.0014146880712360144,
+            0.00749925896525383
+          ],
+          "sha256": "a1a14f6c0361d9fcf39b6df8a698237411a1b33d4be4433a864f914abb2de2b3"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h009.obj",
+          "vertices": 49,
+          "triangles": 94,
+          "bounds_min_m": [
+            -0.025812232866883278,
+            -0.019070275127887726,
+            -8.833112588035874e-06
+          ],
+          "bounds_max_m": [
+            0.0234854593873024,
+            -0.010827837511897087,
+            0.00749999238178134
+          ],
+          "sha256": "17503cd085a4c5ad942685056401b7020cd7c809a2db5fe4ae4c716590ede832"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h010.obj",
+          "vertices": 64,
+          "triangles": 124,
+          "bounds_min_m": [
+            -0.03119991347193718,
+            0.004295251332223415,
+            -1.0380630556028336e-05
+          ],
+          "bounds_max_m": [
+            0.031199848279356956,
+            0.01573641411960125,
+            0.00474725803360343
+          ],
+          "sha256": "4ca51501d04c5926df65c655ce4d461697e65465c45a0e6898c7f4e9c40f4bb8"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h011.obj",
+          "vertices": 49,
+          "triangles": 94,
+          "bounds_min_m": [
+            -0.02213801071047783,
+            -0.010827837511897087,
+            -1.1031254871340934e-05
+          ],
+          "bounds_max_m": [
+            0.03146853670477867,
+            0.0042930119670927525,
+            0.00749999238178134
+          ],
+          "sha256": "22bf4e63f2be289550e487c736c8e3d35d380e42268189e6d43d9691b67acb67"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h012.obj",
+          "vertices": 54,
+          "triangles": 104,
+          "bounds_min_m": [
+            -0.025812240317463875,
+            -0.03145948797464371,
+            0.003809236455708742
+          ],
+          "bounds_max_m": [
+            0.025811413303017616,
+            -0.0157305970788002,
+            0.007499991916120052
+          ],
+          "sha256": "94dfd5d259dd9bd4fa202fe287c9e0f4ceb4ba50c78103be67e816dccee79ce1"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h013.obj",
+          "vertices": 18,
+          "triangles": 32,
+          "bounds_min_m": [
+            0.0025013587437570095,
+            -0.010827837511897087,
+            0.0017939702374860644
+          ],
+          "bounds_max_m": [
+            0.027060093358159065,
+            -0.001971492078155279,
+            0.00749999238178134
+          ],
+          "sha256": "d96884786d8da352ee4a14a416fe64b69b1b3cf896b76a364beb9112280895cf"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h014.obj",
+          "vertices": 63,
+          "triangles": 122,
+          "bounds_min_m": [
+            9.551627954351716e-06,
+            0.015736842527985573,
+            0.0040013170801103115
+          ],
+          "bounds_max_m": [
+            0.026823414489626884,
+            0.031300269067287445,
+            0.007499994244426489
+          ],
+          "sha256": "31aeb3ceb3fce1d62f14c058d23469908d4a82dc3dd1a9ab0ab6e0692d5fe544"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_flange_h015.obj",
+          "vertices": 63,
+          "triangles": 122,
+          "bounds_min_m": [
+            -3.072441586482455e-06,
+            0.015736842527985573,
+            7.333010310084376e-10
+          ],
+          "bounds_max_m": [
+            0.02682178094983101,
+            0.031500011682510376,
+            0.004001317545771599
+          ],
+          "sha256": "a4cbf849e15e88785ca470e7ade7eb8fad29ede42b9354a5177033b778e2d698"
+        }
+      ],
+      "right_yubi_attachment": [
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h000.obj",
+          "vertices": 64,
+          "triangles": 124,
+          "bounds_min_m": [
+            -0.024742066860198975,
+            0.021224474534392357,
+            0.0050019389018416405
+          ],
+          "bounds_max_m": [
+            0.011028539389371872,
+            0.03373477980494499,
+            0.014501096680760384
+          ],
+          "sha256": "3f4f38a4a61edcb8e024201078e7f7825ec5f8f84b9ba64c68719ba9ded3718d"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h001.obj",
+          "vertices": 61,
+          "triangles": 118,
+          "bounds_min_m": [
+            0.017000742256641388,
+            0.012993456795811653,
+            0.005000949837267399
+          ],
+          "bounds_max_m": [
+            0.030337700620293617,
+            0.02885543555021286,
+            0.014501036144793034
+          ],
+          "sha256": "88007c7fe0c52615326080d4d354ed3928ce7214d98b315bd55364ed4cce757b"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h002.obj",
+          "vertices": 15,
+          "triangles": 26,
+          "bounds_min_m": [
+            0.02063162624835968,
+            0.0028814710676670074,
+            0.0050008296966552734
+          ],
+          "bounds_max_m": [
+            0.02686712145805359,
+            0.018741721287369728,
+            0.007006083149462938
+          ],
+          "sha256": "aec877d18fed1f6e868cceea2432318995200e3b9410d63b6dcd62a0e6142b73"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h003.obj",
+          "vertices": 59,
+          "triangles": 114,
+          "bounds_min_m": [
+            -0.03374447301030159,
+            4.470443855097983e-06,
+            0.007005997002124786
+          ],
+          "bounds_max_m": [
+            -0.021955382078886032,
+            0.022932199761271477,
+            0.014501036144793034
+          ],
+          "sha256": "8f8fc6602d7628fe782c19f42a1f347c8ecf7c3a929f3b5f25e192bb662b5725"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h004.obj",
+          "vertices": 8,
+          "triangles": 12,
+          "bounds_min_m": [
+            0.00028814139659516513,
+            0.006055085454136133,
+            0.0011584197636693716
+          ],
+          "bounds_max_m": [
+            0.005986206699162722,
+            0.009637976065278053,
+            0.002316473750397563
+          ],
+          "sha256": "6f360c2ee276f2d1cd4538fcd0b0d3b84496c0e2d7363489157d184e15c8d58c"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h005.obj",
+          "vertices": 63,
+          "triangles": 122,
+          "bounds_min_m": [
+            0.02063162624835968,
+            -0.026704424992203712,
+            0.005000649951398373
+          ],
+          "bounds_max_m": [
+            0.026889294385910034,
+            -0.0028804566245526075,
+            0.007005899678915739
+          ],
+          "sha256": "f8db4eec860ac59947ff54a4f038f14896cc1f3c5fcc91cf1f6d5801e3e2b92d"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h006.obj",
+          "vertices": 64,
+          "triangles": 124,
+          "bounds_min_m": [
+            -0.03374158963561058,
+            -0.02293478325009346,
+            0.005000730510801077
+          ],
+          "bounds_max_m": [
+            -0.02152763307094574,
+            0.0004402576887514442,
+            0.014500887133181095
+          ],
+          "sha256": "54976b7adef7f6e4a33f1ebdf9f00c8722c07ebaacad0d506049e8712c39308d"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h007.obj",
+          "vertices": 64,
+          "triangles": 124,
+          "bounds_min_m": [
+            -0.033737193793058395,
+            0.00044275514665059745,
+            0.005000889766961336
+          ],
+          "bounds_max_m": [
+            -0.02152763307094574,
+            0.025967158377170563,
+            0.007005996536463499
+          ],
+          "sha256": "7ec3725d8988a9c42995ceedaca5f869749ff2a5b903480fd5e96d8e5fc480bd"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h008.obj",
+          "vertices": 64,
+          "triangles": 124,
+          "bounds_min_m": [
+            0.0002889309835154563,
+            -0.032698772847652435,
+            1.3404287528828718e-06
+          ],
+          "bounds_max_m": [
+            0.02063162624835968,
+            0.03372573107481003,
+            0.0070062666200101376
+          ],
+          "sha256": "ead8e34d0e9d8184568b3b15ff6adb73f4f2638ef9b94b72bfe908a771df771f"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h009.obj",
+          "vertices": 63,
+          "triangles": 122,
+          "bounds_min_m": [
+            -0.021527189761400223,
+            -0.02607448771595955,
+            6.539509058711701e-07
+          ],
+          "bounds_max_m": [
+            0.0095675615593791,
+            0.025308145210146904,
+            0.007001982536166906
+          ],
+          "sha256": "78cd2c7369fb0847f0945977bb954bb86d21e2e22115b17fe9c84350650171eb"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h010.obj",
+          "vertices": 34,
+          "triangles": 64,
+          "bounds_min_m": [
+            -0.007967247627675533,
+            -0.0337408110499382,
+            0.007005871273577213
+          ],
+          "bounds_max_m": [
+            0.011030378751456738,
+            -0.030208991840481758,
+            0.01449988316744566
+          ],
+          "sha256": "1ac9f292c117b4cf7959467c276c1f6a6217247338d5ca290653a0f8e342f71e"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h011.obj",
+          "vertices": 64,
+          "triangles": 124,
+          "bounds_min_m": [
+            -0.028882309794425964,
+            -0.032765213400125504,
+            0.005000649485737085
+          ],
+          "bounds_max_m": [
+            -0.007969302125275135,
+            -0.017362475395202637,
+            0.014500715769827366
+          ],
+          "sha256": "ca14a83a52d5d0e5177a8275f04d304186ddf701efe74f96821b86b04b3db79a"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h012.obj",
+          "vertices": 51,
+          "triangles": 98,
+          "bounds_min_m": [
+            0.016999972984194756,
+            -0.028857260942459106,
+            0.007005870807915926
+          ],
+          "bounds_max_m": [
+            0.030722156167030334,
+            -0.012065846472978592,
+            0.01450073067098856
+          ],
+          "sha256": "33532ad87d5cabd37e2bdd605bbdeeecb5e431c78e430872966ee33dae2eb414"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h013.obj",
+          "vertices": 64,
+          "triangles": 124,
+          "bounds_min_m": [
+            0.026868248358368874,
+            -0.02038407139480114,
+            0.0050008464604616165
+          ],
+          "bounds_max_m": [
+            0.03374392166733742,
+            0.019975952804088593,
+            0.014500889927148819
+          ],
+          "sha256": "ea6387c2c3e6106e2e5e6918914610a0cbc20263f9ad2dc0daec9c6eb10273d4"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h014.obj",
+          "vertices": 64,
+          "triangles": 124,
+          "bounds_min_m": [
+            -0.017017554491758347,
+            -0.03373633325099945,
+            0.00500058988109231
+          ],
+          "bounds_max_m": [
+            0.014043005183339119,
+            -0.02607574872672558,
+            0.007005870807915926
+          ],
+          "sha256": "6ebbdad40a2f393e48515ca69ce5e012c13380c0521c1a8a36eb85acd81fe122"
+        },
+        {
+          "path": "robosuite_env/assets/fr3_yubi_right_registered/collision/right_yubi_attachment_h015.obj",
+          "vertices": 64,
+          "triangles": 124,
+          "bounds_min_m": [
+            -0.008000017143785954,
+            -0.00793275237083435,
+            0.007002521771937609
+          ],
+          "bounds_max_m": [
+            0.007998420856893063,
+            0.007931414060294628,
+            0.009764377027750015
+          ],
+          "sha256": "49e0e97d4dba5d4eda75dad8c4257a8987e21e25d88804cf6dc33dadb28b3b2e"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "space": "srgb_uint8",
+  "matrix_rgb": [
+    [1.01381063, 0.0, 0.0],
+    [0.0, 1.04660079, 0.0],
+    [0.0, 0.0, 1.03752418]
+  ],
+  "bias_rgb": [0.0, 0.0, 0.0],
+  "metadata": {
+    "fit_method": "shared_neutral_table_gain",
+    "source_sim": "external: simulated FR3 pinhole wrist RGB rasters (719x539, the 200-degree render after the left-wrist FOV crop h160/top150/bottom160)",
+    "reference_raw": "external: real YUBI wrist RGB frames (left, right; 640x480)",
+    "channel_order": "RGB",
+    "mask": {
+      "region_source_raw_xyxy": [130, 170, 510, 400],
+      "region_source_sim_xyxy_scaled_from_640x480": [146, 191, 573, 449],
+      "region_source_sim_xyxy_description": "region_source_raw_xyxy, defined on the 640x480 real frame, scaled to the 719x539 sim raster by 719/640 in x and 539/480 in y and rounded.",
+      "hsv_saturation_max": 45,
+      "hsv_value_min": 70,
+      "hsv_value_max": 250
+    },
+    "reference_neutral_mean_rgb": [208.82140574, 213.65549728, 208.0090737],
+    "source_neutral_mean_rgb": [205.97673649, 204.14230409, 200.48600127],
+    "note": "Shared black-preserving sRGB gain fit from low-saturation desk pixels; applied identically to R and L wrist RGB outputs."
+  }
+}

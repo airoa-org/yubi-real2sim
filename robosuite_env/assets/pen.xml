@@ -1,0 +1,21 @@
+<mujoco model="pen">
+  <asset>
+    <texture name="pen_tex" type="2d" file="trellis_office/pen.png"/>
+    <material name="pen_mat" texture="pen_tex"/>
+    <mesh name="p_vis" file="trellis_office/pen_vis.obj" scale="0.144739 0.144739 0.144739"/>
+    <mesh name="p_coll_0" file="trellis_office/coll/pen_000.obj" scale="0.144739 0.144739 0.144739"/>
+    <mesh name="p_coll_1" file="trellis_office/coll/pen_001.obj" scale="0.144739 0.144739 0.144739"/>
+  </asset>
+  <worldbody>
+    <body>
+      <body name="object">
+        <geom name="p_c0" type="mesh" mesh="p_coll_0" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="439.645" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c1" type="mesh" mesh="p_coll_1" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="439.645" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_vis_g" type="mesh" mesh="p_vis" material="pen_mat" group="1" contype="0" conaffinity="0" mass="0"/>
+      </body>
+      <site name="bottom_site" pos="0 0 0" size="0.003" rgba="1 0 0 0"/>
+      <site name="top_site" pos="0 0 0.0176" size="0.003" rgba="0 1 0 0"/>
+      <site name="horizontal_radius_site" pos="0.0732 0 0" size="0.003" rgba="0 0 1 0"/>
+    </body>
+  </worldbody>
+</mujoco>

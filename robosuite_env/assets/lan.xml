@@ -1,0 +1,37 @@
+<mujoco model="lan">
+  <asset>
+    <texture name="lan_tex" type="2d" file="trellis_office/lan.png"/>
+    <material name="lan_mat" texture="lan_tex"/>
+    <mesh name="p_vis" file="trellis_office/lan_vis.obj" scale="0.106007 0.106007 0.106007"/>
+    <mesh name="p_coll_0" file="trellis_office/coll/lan_000.obj" scale="0.106007 0.106007 0.106007"/>
+    <mesh name="p_coll_1" file="trellis_office/coll/lan_001.obj" scale="0.106007 0.106007 0.106007"/>
+    <mesh name="p_coll_2" file="trellis_office/coll/lan_002.obj" scale="0.106007 0.106007 0.106007"/>
+    <mesh name="p_coll_3" file="trellis_office/coll/lan_003.obj" scale="0.106007 0.106007 0.106007"/>
+    <mesh name="p_coll_4" file="trellis_office/coll/lan_004.obj" scale="0.106007 0.106007 0.106007"/>
+    <mesh name="p_coll_5" file="trellis_office/coll/lan_005.obj" scale="0.106007 0.106007 0.106007"/>
+    <mesh name="p_coll_6" file="trellis_office/coll/lan_006.obj" scale="0.106007 0.106007 0.106007"/>
+    <mesh name="p_coll_7" file="trellis_office/coll/lan_007.obj" scale="0.106007 0.106007 0.106007"/>
+    <mesh name="p_coll_8" file="trellis_office/coll/lan_008.obj" scale="0.106007 0.106007 0.106007"/>
+    <mesh name="p_coll_9" file="trellis_office/coll/lan_009.obj" scale="0.106007 0.106007 0.106007"/>
+  </asset>
+  <worldbody>
+    <body>
+      <body name="object">
+        <geom name="p_c0" type="mesh" mesh="p_coll_0" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="2021.21" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c1" type="mesh" mesh="p_coll_1" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="2021.21" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c2" type="mesh" mesh="p_coll_2" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="2021.21" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c3" type="mesh" mesh="p_coll_3" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="2021.21" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c4" type="mesh" mesh="p_coll_4" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="2021.21" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c5" type="mesh" mesh="p_coll_5" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="2021.21" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c6" type="mesh" mesh="p_coll_6" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="2021.21" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c7" type="mesh" mesh="p_coll_7" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="2021.21" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c8" type="mesh" mesh="p_coll_8" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="2021.21" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c9" type="mesh" mesh="p_coll_9" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="2021.21" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_vis_g" type="mesh" mesh="p_vis" material="lan_mat" group="1" contype="0" conaffinity="0" mass="0"/>
+      </body>
+      <site name="bottom_site" pos="0 0 0" size="0.003" rgba="1 0 0 0"/>
+      <site name="top_site" pos="0 0 0.0118" size="0.003" rgba="0 1 0 0"/>
+      <site name="horizontal_radius_site" pos="0.0535 0 0" size="0.003" rgba="0 0 1 0"/>
+    </body>
+  </worldbody>
+</mujoco>

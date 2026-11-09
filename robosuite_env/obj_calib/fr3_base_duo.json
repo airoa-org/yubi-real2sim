@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "frame": "table",
+  "robot": "fr3_duo",
+  "base": {
+    "R": {
+      "pos": [
+        -0.05018,
+        -0.0369,
+        0.188585
+      ],
+      "rpy_deg": [
+        51.1651,
+        -10.0268,
+        -63.4721
+      ]
+    },
+    "L": {
+      "pos": [
+        0.05018,
+        -0.0369,
+        0.188585
+      ],
+      "rpy_deg": [
+        -51.1651,
+        -10.0268,
+        -116.5279
+      ]
+    }
+  },
+  "source": {
+    "source": "Duo rig as-built TF via the 3DGS capture gs_to_mujoco_transform.json frames.mujoco_world",
+    "note": "registration world puts world->mount_link at identity; runtime world puts the table top at z=0. The scene contract baked --calibration-world-offset 0 0 -0.1377, so runtime_z = registration_z + 0.1377.",
+    "mount_link_runtime_pos": [
+      0.0,
+      0.0,
+      0.1377
+    ],
+    "world_yaw": "-90 deg about z, from frames.world_to_table_origin in gs_to_mujoco_transform.json"
+  }
+}

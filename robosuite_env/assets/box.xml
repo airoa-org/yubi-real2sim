@@ -1,0 +1,65 @@
+<mujoco model="box">
+  <asset>
+    <texture name="box_tex" type="2d" file="trellis_office/box.png"/>
+    <material name="box_mat" texture="box_tex"/>
+    <mesh name="p_vis" file="trellis_office/box_vis.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_0" file="trellis_office/coll/box_000.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_1" file="trellis_office/coll/box_001.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_2" file="trellis_office/coll/box_002.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_3" file="trellis_office/coll/box_003.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_4" file="trellis_office/coll/box_004.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_5" file="trellis_office/coll/box_005.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_6" file="trellis_office/coll/box_006.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_7" file="trellis_office/coll/box_007.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_8" file="trellis_office/coll/box_008.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_9" file="trellis_office/coll/box_009.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_10" file="trellis_office/coll/box_010.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_11" file="trellis_office/coll/box_011.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_12" file="trellis_office/coll/box_012.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_13" file="trellis_office/coll/box_013.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_14" file="trellis_office/coll/box_014.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_15" file="trellis_office/coll/box_015.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_16" file="trellis_office/coll/box_016.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_17" file="trellis_office/coll/box_017.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_18" file="trellis_office/coll/box_018.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_19" file="trellis_office/coll/box_019.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_20" file="trellis_office/coll/box_020.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_21" file="trellis_office/coll/box_021.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_22" file="trellis_office/coll/box_022.obj" scale="0.315980 0.315980 0.248269"/>
+    <mesh name="p_coll_23" file="trellis_office/coll/box_023.obj" scale="0.315980 0.315980 0.248269"/>
+  </asset>
+  <worldbody>
+    <body>
+      <body name="object">
+        <geom name="p_c0" type="mesh" mesh="p_coll_0" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="5.71147" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c1" type="mesh" mesh="p_coll_1" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="2.93131" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c2" type="mesh" mesh="p_coll_2" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="9.97161" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c3" type="mesh" mesh="p_coll_3" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="16.0318" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c4" type="mesh" mesh="p_coll_4" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="19.7898" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c5" type="mesh" mesh="p_coll_5" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="3.67761" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c6" type="mesh" mesh="p_coll_6" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="2.48825" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c7" type="mesh" mesh="p_coll_7" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="182.43" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c8" type="mesh" mesh="p_coll_8" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="93.0678" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c9" type="mesh" mesh="p_coll_9" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="3.96987" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c10" type="mesh" mesh="p_coll_10" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="15.3379" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c11" type="mesh" mesh="p_coll_11" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="33.6372" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c12" type="mesh" mesh="p_coll_12" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="50.3626" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c13" type="mesh" mesh="p_coll_13" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="131.641" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c14" type="mesh" mesh="p_coll_14" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="88.5817" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c15" type="mesh" mesh="p_coll_15" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="36.1085" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c16" type="mesh" mesh="p_coll_16" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="129.174" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c17" type="mesh" mesh="p_coll_17" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="166.017" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c18" type="mesh" mesh="p_coll_18" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="126.608" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c19" type="mesh" mesh="p_coll_19" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="8.86265" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c20" type="mesh" mesh="p_coll_20" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="188.436" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c21" type="mesh" mesh="p_coll_21" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="10.1155" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c22" type="mesh" mesh="p_coll_22" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" density="59.8414" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_c23" type="mesh" mesh="p_coll_23" group="0" condim="4" friction="1 0.05 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" mass="0" rgba="0.5 0.5 0.5 0"/>
+        <geom name="p_vis_g" type="mesh" mesh="p_vis" material="box_mat" group="1" contype="0" conaffinity="0" mass="0"/>
+      </body>
+      <site name="bottom_site" pos="0 0 0" size="0.003" rgba="1 0 0 0"/>
+      <site name="top_site" pos="0 0 0.240357" size="0.003" rgba="0 1 0 0"/>
+      <site name="horizontal_radius_site" pos="0.1591 0 0" size="0.003" rgba="0 0 1 0"/>
+    </body>
+  </worldbody>
+</mujoco>

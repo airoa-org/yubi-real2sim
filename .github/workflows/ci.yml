@@ -1,0 +1,247 @@
+name: clean-checkout
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  release-contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out exact commit
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up the pinned Python runtime
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version-file: ".python-version"
+
+      - name: Install the hash-locked CI profile
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check \
+            --require-hashes --requirement requirements-lock.ci.txt
+          python -m pip install --disable-pip-version-check uv==0.12.3
+          python -m pip check
+
+      - name: Compile and build the package
+        run: |
+          set -euo pipefail
+          python -m compileall -q src scripts robosuite_env scene
+          python -m build --no-isolation
+
+      - name: Smoke-test the built wheel without mutating the locked environment
+        run: |
+          set -euo pipefail
+          wheel_smoke="${RUNNER_TEMP}/wheel-smoke"
+          python -m pip install --disable-pip-version-check \
+            --no-deps --target "${wheel_smoke}" dist/yubi_real2sim-*.whl
+          PYTHONPATH="${wheel_smoke}" \
+            "${wheel_smoke}/bin/real2sim-artifacts" --help >/dev/null
+          PYTHONPATH="${wheel_smoke}" \
+            "${wheel_smoke}/bin/real2sim-run" --help >/dev/null
+
+      - name: Verify manifests and strict fixture fail-closed behavior
+        run: |
+          set -euo pipefail
+          PYTHONPATH=src python -m real2sim.artifacts \
+            --manifest artifacts/manifest.yaml \
+            --repo-root "$PWD" \
+            --artifact tiny-checkpoint-v1 \
+            --artifact tiny-scene-v2 \
+            --artifact tiny-registered-desk-v1 \
+            --artifact tiny-policy-episode-v1 \
+            --artifact tiny-repository-assets-v1
+          PYTHONPATH=src python -m real2sim.launcher \
+            --config config/release/fixture_v2.yaml --dry-run
+          set +e
+          fixture_error="$(
+            PYTHONPATH=src python -m real2sim.launcher \
+              --config config/release/fixture_v2.yaml \
+              --check-runtime 2>&1
+          )"
+          fixture_status="$?"
+          set -e
+          test "${fixture_status}" -eq 2
+          grep -F "repository asset contract failed" <<<"${fixture_error}"
+          grep -F "is missing" <<<"${fixture_error}"
+          # The environment-check profile runs in production mode.
+          REAL2SIM_INPUTS_ROOT=/tmp/release-inputs \
+            PYTHONPATH=src python -m real2sim.launcher \
+              --config config/release/fr3/flat/a_room_cup_cup1trim.yaml \
+              --dry-run > "${RUNNER_TEMP}/environment-check-dry-run.json"
+          python scripts/validate_clean_clone_acceptance.py dry-run \
+            --input "${RUNNER_TEMP}/environment-check-dry-run.json" \
+            --repo-root "$PWD" --mode production --expected-rollouts 10 \
+            --run-root-output "${RUNNER_TEMP}/environment-check-run-root.txt"
+          PYTHONPATH=src python -m real2sim.doctor --repo-root "$PWD" \
+            --manifest artifacts/manifest.yaml \
+            --support-matrix config/support-matrix.yaml \
+            --profile cpu-fixture \
+            --artifact tiny-checkpoint-v1 \
+            --artifact tiny-scene-v2 \
+            --lockfile requirements-lock.ci.txt \
+            --output-path "${RUNNER_TEMP}/real2sim-doctor"
+
+      - name: Run clean-install contract tests
+        run: |
+          set -euo pipefail
+          # Distribution contracts exercise the minimal installation. The whole
+          # CPU suite imports simulator dependencies during collection and runs
+          # below in the complete uv.lock environment.
+          PYTHONPATH=src python -m pytest tests/distribution -q -m "not gpu and not heavy and not assets" -p no:cacheprovider
+          bash -n scripts/bootstrap.sh scripts/check_host.sh scripts/compile_locks.sh \
+            scripts/run_policy_batch.sh
+          git diff --check
+
+  lint:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out exact commit
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Set up the pinned Python runtime
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version-file: ".python-version"
+
+      - name: Check for unused imports and variables
+        run: |
+          set -euo pipefail
+          lint_requirements="${RUNNER_TEMP}/ruff-requirements.txt"
+          echo "ruff==0.17.0 --hash=sha256:bc73e7c133e82d55b5f15897b2a442d72c0cb4a0c886c46801ce3c247150b60c" \
+            > "${lint_requirements}"
+          python -m pip install --disable-pip-version-check --no-deps \
+            --require-hashes --requirement "${lint_requirements}"
+          # ruff skips directories named build by default; rollout/build is source.
+          ruff check --no-fix . robosuite_env/rollout/build
+
+      - name: Check for unused code
+        continue-on-error: true  # report-only
+        run: |
+          set -euo pipefail
+          lint_requirements="${RUNNER_TEMP}/vulture-requirements.txt"
+          echo "vulture==2.16 --hash=sha256:6e0f1c312cef1c87856957e5c2ca9608834a7c794c2180477f30bf0e4cc58eee" \
+            > "${lint_requirements}"
+          python -m pip install --disable-pip-version-check --no-deps \
+            --require-hashes --requirement "${lint_requirements}"
+          report="${RUNNER_TEMP}/vulture.txt"
+          status=0
+          vulture > "${report}" || status=$?
+          cat "${report}"
+          # GitHub keeps at most 10 warning annotations per step, so the job summary carries the full list.
+          { echo '### Unused code (vulture)'; echo '```'; cat "${report}"; echo '```'; } >> "${GITHUB_STEP_SUMMARY}"
+          exit "${status}"
+
+      - name: Check vulture marks and new unmarked findings
+        run: |
+          status=0
+          python scripts/check_vulture_marks.py || status=1
+          python scripts/check_vulture_baseline.py || status=1
+          exit "${status}"
+
+  locked-runtime:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      UV_LINK_MODE: hardlink
+    steps:
+      - name: Check out exact commit
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Set up the pinned Python runtime
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version-file: ".python-version"
+
+      - name: Make room for the locked CUDA runtime
+        run: |
+          set -euo pipefail
+          # This disposable hosted runner does not build Android, .NET, Haskell
+          # or CodeQL projects. Retain Python and the native build toolchain.
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h "$GITHUB_WORKSPACE" "$RUNNER_TEMP"
+
+      - name: Sync and verify the locked CUDA wheel graph (no GPU needed)
+        env:
+          UV_CACHE_DIR: ${{ runner.temp }}/real2sim-uv-cache
+          UV_NO_GROUP: cuda-extensions
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check uv==0.12.3
+          uv lock --check
+          # Install the pinned build backends before building Git dependencies,
+          # exactly as bootstrap does. Native Gaussian builds run on GPU hosts.
+          uv sync --frozen --no-install-project \
+            --no-install-package openpi --no-install-package openpi-client \
+            --no-install-package lerobot --no-install-package robosuite
+          uv sync --frozen --no-build-isolation
+          uv pip check --python .venv/bin/python
+          .venv/bin/python src/real2sim/support_matrix.py check-torch
+
+      - name: Run CPU contracts with the locked runtime dependencies
+        run: |
+          set -euo pipefail
+          .venv/bin/python -m pytest -q \
+            -m "not gpu and not heavy and not assets" -p no:cacheprovider
+
+      - name: Run the MuJoCo CPU wrist regressions without skips
+        env:
+          # These tests compile the production YUBI wrist scene with MuJoCo and
+          # pass the source raster in, so they never open a GL context. With GL
+          # disabled an accidental render fails instead of needing a display.
+          MUJOCO_GL: disable
+        run: |
+          set -euo pipefail
+          # Tests that take the mujoco fixture are marked heavy, which the step
+          # above deselects, so select these files without the heavy filter. The
+          # GL tests in test_direct_wrist.py are marked gpu and stay deselected.
+          wrist_log="${RUNNER_TEMP}/wrist-mujoco-cpu.log"
+          .venv/bin/python -m pytest -q -rs -p no:cacheprovider \
+            -m "not gpu and not assets" \
+            tests/unit/rendering/test_wrist_intrinsics.py \
+            tests/unit/rendering/test_wrist_source_camera.py \
+            tests/unit/rendering/test_direct_wrist.py | tee "${wrist_log}"
+          # A missing MuJoCo would skip them through importorskip; refuse that.
+          if grep -Eq "[0-9]+ skipped" "${wrist_log}"; then
+            echo "a MuJoCo wrist regression was skipped" >&2
+            exit 1
+          fi
+
+      # After the CPU contracts, which run in the environment bootstrap installs.
+      - name: Check the FR3 model against the bootstrap-pinned franka_description
+        env:
+          UV_CACHE_DIR: ${{ runner.temp }}/real2sim-uv-cache
+          UV_NO_GROUP: cuda-extensions
+        run: |
+          set -euo pipefail
+          uv sync --frozen --no-build-isolation --group fr3-model-contract
+          uv pip check --python .venv/bin/python
+          url="$(sed -n 's/^FRANKA_DESCRIPTION_URL="${FRANKA_DESCRIPTION_URL:-\(.*\)}"$/\1/p' scripts/bootstrap.sh)"
+          ref="$(sed -n 's/^FRANKA_DESCRIPTION_REF="${FRANKA_DESCRIPTION_REF:-\([0-9a-f]\{40\}\)}"$/\1/p' scripts/bootstrap.sh)"
+          if [ -z "${url}" ] || [ -z "${ref}" ]; then
+            echo "cannot parse the franka_description pin from scripts/bootstrap.sh" >&2
+            exit 1
+          fi
+          git init -q third_party/franka_description
+          git -C third_party/franka_description fetch -q --depth 1 "${url}" "${ref}"
+          git -C third_party/franka_description checkout -q --detach FETCH_HEAD
+          .venv/bin/python -m pytest -q -rsxX -p no:cacheprovider \
+            tests/unit/robots/test_fr3_model_contract.py | tee "${RUNNER_TEMP}/fr3-model.txt"
+          if grep -qE '^(SKIPPED|XFAIL|XPASS)' "${RUNNER_TEMP}/fr3-model.txt"; then
+            echo "the FR3 model contract must run every test" >&2
+            exit 1
+          fi

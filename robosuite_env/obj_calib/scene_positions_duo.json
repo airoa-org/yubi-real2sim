@@ -1,0 +1,67 @@
+{
+  "cup_xy": [
+    -0.095,
+    -0.64
+  ],
+  "plate_xy": [
+    0.075,
+    -0.61
+  ],
+  "method": "duo_table_placement_board_v2",
+  "offset_world_m": {
+    "cup": [
+      -0.15,
+      0.1,
+      0.0
+    ],
+    "plate": [
+      -0.15,
+      0.0,
+      0.0
+    ]
+  },
+  "base_positions": "scene_positions_sam3.json",
+  "centroids_px": {
+    "cup": [
+      433.3,
+      273.4
+    ],
+    "plate": [
+      323.5,
+      231.7
+    ]
+  },
+  "pixel_to_world_affine": {
+    "M": [
+      [
+        0.0015798846074428139,
+        0.00026210501719610207
+      ],
+      [
+        -0.0001243822604547563,
+        -0.0014822751593949694
+      ]
+    ],
+    "t": [
+      -0.6020456963165985,
+      0.6388839642821723
+    ],
+    "det": -2.3092224938075722e-06,
+    "rms_mm": 13.824900087579708
+  },
+  "source": {
+    "board_view": "gopro",
+    "initial_arm_joints": "duo_init_high",
+    "kind": "manual_placement",
+    "placed_at": "2026-09-12T03:45:27.675Z",
+    "placed_by": "manual placement on the Duo table placement board",
+    "position_step_m": 0.005,
+    "scene": "franka_duo",
+    "yaw_step_deg": 5,
+    "mass_source": "measured on the real objects and entered on the placement board; the MJCF meshes carry a density instead, which overstates most of these"
+  },
+  "mass_kg": {
+    "cup": 0.028,
+    "plate": 0.05
+  }
+}
